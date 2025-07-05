@@ -24,6 +24,7 @@
         fill="currentColor"
         viewBox="0 0 24 24"
       >
+        <!-- Icono hamburguesa ☰ -->
         <path d="M4 6h16M4 12h16M4 18h16" />
       </svg>
     </button>
@@ -31,7 +32,7 @@
     <!-- Menú -->
     <nav
       id="menu"
-      class="hidden flex-col absolute top-full left-0 w-full bg-black md:flex md:flex-row md:space-x-6 md:ml-6 md:static md:bg-transparent z-50"
+      class="hidden flex-col absolute top-full left-0 w-full bg-black md:flex md:flex-row md:space-x-6 md:ml-6 md:static md:bg-transparent z-50 transition-all duration-300 ease-in-out"
     >
       <a href="#" class="block px-4 py-2 md:px-0 md:py-0 hover:bg-gray-800 md:hover:bg-transparent">Home</a>
       <a href="#" class="block px-4 py-2 md:px-0 md:py-0 hover:bg-gray-800 md:hover:bg-transparent">Contáctanos</a>
@@ -79,13 +80,14 @@
       if (menuBtn && menu && menuIcon) {
         menuBtn.addEventListener('click', () => {
           menu.classList.toggle('hidden');
-          menuIcon.classList.add('rotate-180');
+          menu.classList.toggle('translate-y-0'); // Animación slide
+          menuIcon.classList.add('rotate-180'); // Rotación animada
 
           // Cambia entre ☰ y ✖️
           if (menu.classList.contains('hidden')) {
-            menuIcon.innerHTML = '<path d="M4 6h16M4 12h16M4 18h16" />';
+            menuIcon.innerHTML = '<path d="M4 6h16M4 12h16M4 18h16" />'; // ☰
           } else {
-            menuIcon.innerHTML = '<path d="M6 18L18 6M6 6l12 12" />';
+            menuIcon.innerHTML = '<path d="M6 18L18 6M6 6l12 12" />'; // ✖️
           }
 
           setTimeout(() => menuIcon.classList.remove('rotate-180'), 300);
