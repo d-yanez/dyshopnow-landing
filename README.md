@@ -158,3 +158,5 @@ dyshopnow-landing/
 steps by step:
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
+# local test
+npm run dev:local
