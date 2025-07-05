@@ -1,0 +1,18 @@
+{
+  "categories": [
+    {
+      "slug": "blox-fruits",
+      "title": "Blox Fruits",
+      "description": "Encuentra figuras, accesorios y más del universo Blox Fruits.",
+      "banner": "https://storage.googleapis.com/dyshopnow-landing-assets/blox-fruits/banner-demo.jpg",
+      "priority": 1
+    },
+    {
+      "slug": "sonic",
+      "title": "Sonic",
+      "description": "Todo para fans de Sonic: figuras, mochilas y kits de cumpleaños.",
+      "banner": "https://storage.googleapis.com/dyshopnow-landing-assets/sonic/banner-demo.jpg",
+      "priority": 2
+    }
+  ]
+}
