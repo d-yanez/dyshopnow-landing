@@ -11,13 +11,17 @@
 
   <!-- HEADER -->
   <header class="bg-black text-white p-4 flex justify-between items-center relative">
-    <h1 class="text-xl font-bold">Dyshopnow</h1>
+    <div class="flex items-center space-x-4">
+      <h1 class="text-xl font-bold">Dyshopnow</h1>
+    </div>
 
     <!-- Botón hamburguesa -->
-    <button id="menu-btn" class="block md:hidden focus:outline-none ml-4">
+    <button id="menu-btn" class="block md:hidden focus:outline-none">
       <svg
-        class="w-7 h-7 fill-current"
+        id="menu-icon"
+        class="w-7 h-7 text-white transition-transform duration-300 ease-in-out"
         xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
         viewBox="0 0 24 24"
       >
         <path d="M4 6h16M4 12h16M4 18h16" />
@@ -27,7 +31,7 @@
     <!-- Menú -->
     <nav
       id="menu"
-      class="hidden flex-col absolute top-full left-0 w-full bg-black md:flex md:flex-row md:space-x-6 md:static md:bg-transparent z-50"
+      class="hidden flex-col absolute top-full left-0 w-full bg-black md:flex md:flex-row md:space-x-6 md:ml-6 md:static md:bg-transparent z-50"
     >
       <a href="#" class="block px-4 py-2 md:px-0 md:py-0 hover:bg-gray-800 md:hover:bg-transparent">Home</a>
       <a href="#" class="block px-4 py-2 md:px-0 md:py-0 hover:bg-gray-800 md:hover:bg-transparent">Contáctanos</a>
@@ -70,10 +74,21 @@
     document.addEventListener('DOMContentLoaded', () => {
       const menuBtn = document.getElementById('menu-btn');
       const menu = document.getElementById('menu');
+      const menuIcon = document.getElementById('menu-icon');
 
-      if (menuBtn && menu) {
+      if (menuBtn && menu && menuIcon) {
         menuBtn.addEventListener('click', () => {
           menu.classList.toggle('hidden');
+          menuIcon.classList.add('rotate-180');
+
+          // Cambia entre ☰ y ✖️
+          if (menu.classList.contains('hidden')) {
+            menuIcon.innerHTML = '<path d="M4 6h16M4 12h16M4 18h16" />';
+          } else {
+            menuIcon.innerHTML = '<path d="M6 18L18 6M6 6l12 12" />';
+          }
+
+          setTimeout(() => menuIcon.classList.remove('rotate-180'), 300);
         });
       }
     });
