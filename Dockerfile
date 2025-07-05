@@ -1,24 +1,27 @@
-# Usa Node.js LTS
-FROM node:20
+# Build stage: compila Tailwind
+FROM node:20 AS builder
 
-# Establece el directorio de trabajo
 WORKDIR /app
 
-# Copia package.json y package-lock.json
+# Copia dependencias e instala
 COPY package*.json ./
-
-# Instala dependencias
 RUN npm install
 
-# Copia todo el código
+# Copia código y compila TailwindCSS
 COPY . .
-
-# Compila TailwindCSS
 RUN npx tailwindcss -i ./public/css/styles.css -o ./public/css/output.css
 
-# Expone el puerto (Cloud Run usa 8080)
-ENV PORT=8080
+# Runtime stage: Nginx para servir contenido estático
+FROM nginx:alpine
+
+# Copia archivos estáticos al directorio público de Nginx
+COPY --from=builder /app/public /usr/share/nginx/html
+
+# Copia configuración básica de Nginx (opcional)
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Expone el puerto 8080
 EXPOSE 8080
 
-# Comando para iniciar
-CMD ["npm", "start"]
+# Comando para ejecutar Nginx en primer plano
+CMD ["nginx", "-g", "daemon off;"]
