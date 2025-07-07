@@ -3,15 +3,15 @@
     {
       "slug": "blox-fruits",
       "title": "Blox Fruits",
-      "description": "Encuentra figuras, accesorios y más del universo Blox Fruits.",
-      "banner": "https://storage.googleapis.com/dyshopnow-landing-assets/blox-fruits/banner-demo.jpg",
+      "description": "Descubre figuras, accesorios y peluches exclusivos de Blox Fruits 🌊🍎. ¡Colecciona los personajes más épicos del universo Roblox y consigue productos únicos antes que nadie!",
+      "banner": "/images/catalog/blox-fruits.jpg",
       "priority": 1
     },
     {
       "slug": "sonic",
       "title": "Sonic",
-      "description": "Todo para fans de Sonic: figuras, mochilas y kits de cumpleaños.",
-      "banner": "https://storage.googleapis.com/dyshopnow-landing-assets/sonic/banner-demo.jpg",
+      "description": "Todo para los verdaderos fans de Sonic 🦔⚡: figuras articuladas, mochilas, kits de cumpleaños y coleccionables exclusivos en tendencia.",
+      "banner": "/images/catalog/sonic.jpg",
       "priority": 2
     }
   ]

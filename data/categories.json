@@ -1,0 +1,64 @@
+[
+  {
+    "slug": "blox-fruits",
+    "name": "Blox Fruits",
+    "banner": "/images/banners/blox-fruits.jpg",
+    "seo": {
+      "title": "Blox Fruits Chile - Figuras y Peluches Exclusivos | Dyshopnow",
+      "description": "Compra figuras, peluches y coleccionables de Blox Fruits 🌊🍎 en Dyshopnow. Productos oficiales y exclusivos para fans de Roblox. ¡Envíos rápidos en Chile!"
+    },
+    "products": [
+      {
+        "name": "Caja Blox Fruits De La Serie 2 Con Peluche + Código Azar",
+        "price": 69990,
+        "stock": 1,
+        "sku": 2836251184,
+        "url": "https://www.dyshopnow.cl/product/caja-blox-fruits-de-la-serie-2-con-peluche-codigo-azar",
+        "description": "🎁 Incluye peluche coleccionable + código DLC para desbloquear sorpresas en Blox Fruits. 🌟 ¡Ideal para regalar o expandir tu colección! Haz clic y consíguelo ahora.",
+        "tag": "Colección 2025",
+        "image": "/images/products/blox-peluche.jpg"
+      },
+      {
+        "name": "1 Mini Figura Blox Fruits De La Serie 2 Al Azar + Código",
+        "price": 39990,
+        "stock": 1,
+        "sku": 2822243544,
+        "url": "https://www.dyshopnow.cl/product/1-mini-figura-blox-fruits-de-la-serie-2-al-azar-codigo",
+        "description": "✨ Sorpréndete con una mini figura de fruta + código misterioso para el juego. 🛒 ¡Añádelo a tu carrito ahora!",
+        "tag": "Sorpresa",
+        "image": "/images/products/blox-mini.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "sonic",
+    "name": "Sonic",
+    "banner": "/images/banners/sonic.jpg",
+    "seo": {
+      "title": "Sonic Chile - Figuras y Packs Exclusivos | Dyshopnow",
+      "description": "Encuentra figuras de Sonic The Hedgehog 🦔⚡ en Dyshopnow. Artículos exclusivos de colección y productos oficiales en tendencia. ¡Despacho rápido!"
+    },
+    "products": [
+      {
+        "name": "Figura Shadow Línea Wave 2 De Sonic 3 Oficial 22pts Articulado",
+        "price": 69990,
+        "stock": 1,
+        "sku": 1558902531,
+        "url": "https://www.dyshopnow.cl/product/figura-shadow-linea-wave-2-de-sonic-3-oficial-22pts-articuld",
+        "description": "🔥 Figura coleccionable de Shadow edición limitada con 22 puntos de articulación. Perfecta para fans de Sonic The Hedgehog. 🛒¡Adquiérela ahora y eleva tu colección!",
+        "tag": "Exclusivo",
+        "image": "/images/products/sonic-shadow.jpg"
+      },
+      {
+        "name": "Pack Exclusivo Super Sonic Y Súper Shadow Sonic 3 Original",
+        "price": 159990,
+        "stock": 1,
+        "sku": 1570396795,
+        "url": "https://www.dyshopnow.cl/product/pack-exclusivo-super-sonic-y-super-shadow-sonic-3-original",
+        "description": "⚡ Llévate este pack exclusivo con figuras iluminadas de Super Sonic y Super Shadow. Ideal para coleccionistas y fanáticos. ✅ ¡Compra ahora y asegura el tuyo!",
+        "tag": "Pack Premium",
+        "image": "/images/products/sonic-pack.jpg"
+      }
+    ]
+  }
+]

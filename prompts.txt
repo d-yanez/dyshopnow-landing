@@ -1,0 +1,9 @@
+1) para imagen de catalogo, banner, producto
+
+Analiza la imagen adjunta y genera un JSON avanzado de contexto que incluya todos los atributos visibles de la foto (nombre de archivo, dimensiones, formato, colores predominantes, objetos detectados, relaciones entre objetos, contexto probable de uso, público objetivo y observaciones útiles). No inventes detalles que no estén presentes en la imagen.
+Luego, usando ese JSON como guía, mejora la imagen respetando fielmente los atributos detectados (colores, composición, objetos) y añade un estilo moderno y atractivo para catálogo digital.
+Exporta la imagen final en JPG con calidad entre 70% y 80% y tamaño exacto de 800x600 px.
+
+catalogo: 800x600 JPG 70-80%
+banner: 1200x300 JPG 70-80%
+producto: 600x600 JPG 70-80%
