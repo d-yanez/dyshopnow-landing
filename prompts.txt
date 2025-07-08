@@ -6,4 +6,4 @@ Exporta la imagen final en JPG con calidad entre 70% y 80% y tamaño exacto de 8
 
 catalogo: 800x600 JPG 70-80%
 banner: 1200x300 JPG 70-80%
-producto: 600x600 JPG 70-80%
+producto: 800x600 JPG 70-80%
