@@ -1,19 +1,42 @@
-<header class="bg-black text-white px-4 py-3 flex justify-between items-center relative">
-  <div class="flex items-center">
-    <h1 class="text-xl font-bold">Dyshopnow</h1>
+<header class="bg-gradient-to-r from-black via-blue-900 to-black text-white px-4 py-3 shadow-lg">
+  <!-- LOGO -->
+  <div class="flex justify-between items-center relative">
+    <h1 class="text-xl font-bold text-white tracking-wide">
+      <span class="text-blue-400">Dyshop</span><span class="text-white">now</span>
+    </h1>
+
+    <!-- Botón hamburguesa (mobile) -->
+    <button id="menu-btn" class="block md:hidden focus:outline-none">
+      <svg
+        id="menu-icon"
+        class="w-7 h-7 text-white transition-transform duration-300 ease-in-out"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <!-- Menú -->
+    <nav
+      id="menu"
+      class="hidden flex-col absolute top-full left-0 w-full bg-gradient-to-r from-black via-blue-900 to-black md:flex md:flex-row md:space-x-6 md:static md:bg-transparent z-50"
+    >
+      <a
+        href="/"
+        class="block px-4 py-2 md:px-2 md:py-0 hover:text-blue-400 md:hover:text-blue-400 transition-colors duration-300 ease-in-out"
+      >Home</a>
+      <a
+        href="#"
+        class="block px-4 py-2 md:px-2 md:py-0 hover:text-blue-400 md:hover:text-blue-400 transition-colors duration-300 ease-in-out"
+      >Contáctanos</a>
+      <a
+        href="#"
+        class="block px-4 py-2 md:px-2 md:py-0 hover:text-blue-400 md:hover:text-blue-400 transition-colors duration-300 ease-in-out"
+      >Quiénes somos</a>
+    </nav>
   </div>
-
-  <!-- Botón hamburguesa (solo visible en mobile) -->
-  <button id="menu-btn" class="block md:hidden focus:outline-none">
-    <svg id="menu-icon" class="w-7 h-7 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-    </svg>
-  </button>
-
-  <!-- Menú -->
-  <nav id="menu" class="hidden flex-col absolute top-full left-0 w-full bg-black md:flex md:flex-row md:space-x-6 md:static md:bg-transparent z-50">
-    <a href="/" class="block px-4 py-2 md:px-2 md:py-0 hover:bg-gray-800 md:hover:bg-transparent">Home</a>
-    <a href="#" class="block px-4 py-2 md:px-2 md:py-0 hover:bg-gray-800 md:hover:bg-transparent">Contáctanos</a>
-    <a href="#" class="block px-4 py-2 md:px-2 md:py-0 hover:bg-gray-800 md:hover:bg-transparent">Quiénes somos</a>
-  </nav>
 </header>
