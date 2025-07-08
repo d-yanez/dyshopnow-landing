@@ -23,7 +23,8 @@
     <main class="p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <% category.products.forEach(product => { %>
         <div class="w-full rounded-2xl overflow-hidden shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out">
-          <img src="<%= product.image %>" alt="<%= product.name %>" class="w-full h-48 object-cover block">
+          <img src="<%= product.image %>" alt="<%= product.name %>" class="w-full object-contain bg-white block">
+
           <div class="p-4">
             <h2 class="text-lg font-bold mb-2"><%= product.name %></h2>
             <p class="text-sm text-gray-600 mb-1">SKU: <%= product.sku %></p>
