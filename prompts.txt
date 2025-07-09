@@ -7,3 +7,34 @@ Exporta la imagen final en JPG con calidad entre 70% y 80% y tamaño exacto de 8
 catalogo: 800x600 JPG 70-80%
 banner: 1200x300 JPG 70-80%
 producto: 800x600 JPG 70-80%
+
+2) prompt para json catalogo products en base a ficha adjunta.
+
+A partir de la imagen adjunta de la ficha de producto de mi sitio web, genera un JSON con el siguiente formato:
+
+{
+  "name": "",
+  "price": ,
+  "stock": 1,
+  "sku": ,
+  "url": "<URL que yo proporcione>",
+  "description": "",
+  "tag": "",
+  "image": ""
+}
+
+name: el título del producto que aparece en la ficha.
+
+price: el precio mostrado en la ficha (sin símbolos).
+
+stock: deja siempre el valor 1.
+
+sku: el SKU tal como aparece en la ficha.
+
+url: https://www.dyshopnow.cl/product/figuras-sonic-werehog-super-sonic-y-sonic-con-grind-shoes.
+
+description: crea un texto llamativo optimizado para SEO basado en la descripción de la ficha, con un tamaño de 150 a 200 caracteres.
+
+tag: sugiere una única palabra clave potente para SEO que defina claramente el producto.
+
+image: propone un nombre corto concatenado con el SKU, ejemplo: /images/products/pack-sonic-1570396795.jpg.

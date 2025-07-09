@@ -58,7 +58,27 @@
         "description": "⚡ Llévate este pack exclusivo con figuras iluminadas de Super Sonic y Super Shadow. Ideal para coleccionistas y fanáticos. ✅ ¡Compra ahora y asegura el tuyo!",
         "tag": "Pack Premium",
         "image": "/images/products/sonic-pack.jpg"
-      }
+      },
+      {
+      "name": "Figuras Sonic Werehog Super Sonic y Sonic Con Grind Shoes",
+      "price": 129990,
+      "stock": 1,
+      "sku": 1583293805,
+      "url": "https://www.dyshopnow.cl/product/figuras-sonic-werehog-super-sonic-y-sonic-con-grind-shoes",
+      "description": "Pack exclusivo de 3 figuras de Sonic: Werehog, Super Sonic y Sonic con Grind Shoes. Detalladas, articuladas y perfectas para fans y coleccionistas. Stock limitado.",
+      "tag": "figuras sonic coleccion",
+      "image": "/images/products/pack-sonic-1583293805.jpg"
+      },
+      {
+      "name": "Pack 4 Figuras Acción Sonic 3 Original Shadow Sonic Efectos",
+      "price": 179990,
+      "stock": 1,
+      "sku": 1547119207,
+      "url": "https://www.dyshopnow.cl/product/pack-4-figuras-accion-sonic-3-original-shadow-sonic-efectos",
+      "description": "Pack de 4 figuras articuladas de Sonic 3 con efectos de luz en Sonic y Shadow. Perfecto para fans que buscan coleccionables auténticos y detallados.",
+      "tag": "coleccionables",
+      "image": "/images/products/pack-sonic-4pk-1547119207.jpg"
+    }
     ]
   }
 ]
