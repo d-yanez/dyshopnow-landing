@@ -2,7 +2,7 @@
   {
     "slug": "blox-fruits",
     "name": "Blox Fruits",
-    "banner": "/images/banners/blox-fruits.jpg",
+    "banner": "https://storage.googleapis.com/dyshopnow-landing-assets/banners/blox-fruits.jpg",
     "seo": {
       "title": "Blox Fruits Chile - Figuras y Peluches Exclusivos | Dyshopnow",
       "description": "Compra figuras, peluches y coleccionables de Blox Fruits 🌊🍎 en Dyshopnow. Productos oficiales y exclusivos para fans de Roblox. ¡Envíos rápidos en Chile!"
@@ -16,7 +16,7 @@
         "url": "https://www.dyshopnow.cl/product/caja-blox-fruits-de-la-serie-2-con-peluche-codigo-azar",
         "description": "🎁 Incluye peluche coleccionable + código DLC para desbloquear sorpresas en Blox Fruits. 🌟 ¡Ideal para regalar o expandir tu colección! Haz clic y consíguelo ahora.",
         "tag": "Colección 2025",
-        "image": "/images/products/blox-peluche.jpg"
+        "image": "https://storage.googleapis.com/dyshopnow-landing-assets/products/blox-peluche.jpg"
       },
       {
         "name": "1 Mini Figura Blox Fruits De La Serie 2 Al Azar + Código",
@@ -26,14 +26,14 @@
         "url": "https://www.dyshopnow.cl/product/1-mini-figura-blox-fruits-de-la-serie-2-al-azar-codigo",
         "description": "✨ Sorpréndete con una mini figura de fruta + código misterioso para el juego. 🛒 ¡Añádelo a tu carrito ahora!",
         "tag": "Sorpresa",
-        "image": "/images/products/blox-mini.jpg"
+        "image": "https://storage.googleapis.com/dyshopnow-landing-assets/products/blox-mini.jpg"
       }
     ]
   },
   {
     "slug": "sonic",
     "name": "Sonic",
-    "banner": "/images/banners/sonic.jpg",
+    "banner": "https://storage.googleapis.com/dyshopnow-landing-assets/banners/sonic.jpg",
     "seo": {
       "title": "Sonic Chile - Figuras y Packs Exclusivos | Dyshopnow",
       "description": "Encuentra figuras de Sonic The Hedgehog 🦔⚡ en Dyshopnow. Artículos exclusivos de colección y productos oficiales en tendencia. ¡Despacho rápido!"
@@ -47,7 +47,7 @@
         "url": "https://www.dyshopnow.cl/product/figura-shadow-linea-wave-2-de-sonic-3-oficial-22pts-articuld",
         "description": "🔥 Figura coleccionable de Shadow edición limitada con 22 puntos de articulación. Perfecta para fans de Sonic The Hedgehog. 🛒¡Adquiérela ahora y eleva tu colección!",
         "tag": "Exclusivo",
-        "image": "/images/products/sonic-shadow.jpg"
+        "image": "https://storage.googleapis.com/dyshopnow-landing-assets/products/sonic-shadow.jpg"
       },
       {
         "name": "Pack Exclusivo Super Sonic Y Súper Shadow Sonic 3 Original",
@@ -57,7 +57,7 @@
         "url": "https://www.dyshopnow.cl/product/pack-exclusivo-super-sonic-y-super-shadow-sonic-3-original",
         "description": "⚡ Llévate este pack exclusivo con figuras iluminadas de Super Sonic y Super Shadow. Ideal para coleccionistas y fanáticos. ✅ ¡Compra ahora y asegura el tuyo!",
         "tag": "Pack Premium",
-        "image": "/images/products/sonic-pack.jpg"
+        "image": "https://storage.googleapis.com/dyshopnow-landing-assets/products/sonic-pack.jpg"
       },
       {
       "name": "Figuras Sonic Werehog Super Sonic y Sonic Con Grind Shoes",
@@ -67,7 +67,7 @@
       "url": "https://www.dyshopnow.cl/product/figuras-sonic-werehog-super-sonic-y-sonic-con-grind-shoes",
       "description": "Pack exclusivo de 3 figuras de Sonic: Werehog, Super Sonic y Sonic con Grind Shoes. Detalladas, articuladas y perfectas para fans y coleccionistas. Stock limitado.",
       "tag": "figuras sonic coleccion",
-      "image": "/images/products/pack-sonic-1583293805.jpg"
+      "image": "https://storage.googleapis.com/dyshopnow-landing-assets/products/pack-sonic-1583293805.jpg"
       },
       {
       "name": "Pack 4 Figuras Acción Sonic 3 Original Shadow Sonic Efectos",
@@ -77,7 +77,7 @@
       "url": "https://www.dyshopnow.cl/product/pack-4-figuras-accion-sonic-3-original-shadow-sonic-efectos",
       "description": "Pack de 4 figuras articuladas de Sonic 3 con efectos de luz en Sonic y Shadow. Perfecto para fans que buscan coleccionables auténticos y detallados.",
       "tag": "coleccionables",
-      "image": "/images/products/pack-sonic-4pk-1547119207.jpg"
+      "image": "https://storage.googleapis.com/dyshopnow-landing-assets/products/pack-sonic-4pk-1547119207.jpg"
     }
     ]
   }
