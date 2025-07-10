@@ -165,3 +165,11 @@ npm run dev:local
 1) look dyshopnow/gcp/scripts-sh/convert-to-webp
 2) downloas imagens to 'image' and scripts out put in 'image-webP'
 3) run ./convert-to-webp.sh
+
+#improve css minifircado purgueCSS compress.. (output.css ej)
+1) to build -> npm run tailwind:build
+# Primero construye la versión de producción (minificada + purgada)
+npm run tailwind:build
+
+# Luego levanta tu servidor como siempre
+npm run dev
