@@ -160,3 +160,8 @@ npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 # local test
 npm run dev:local
+
+#improve images converte to webP:
+1) look dyshopnow/gcp/scripts-sh/convert-to-webp
+2) downloas imagens to 'image' and scripts out put in 'image-webP'
+3) run ./convert-to-webp.sh
