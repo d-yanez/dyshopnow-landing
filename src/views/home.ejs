@@ -6,27 +6,9 @@
     <title><%= seo.title %></title>
     <meta name="description" content="<%= seo.description %>" />
     <link href="/css/output.css" rel="stylesheet" />
-    <style>
-      /* Transiciones personalizadas */
-      .menu-enter {
-        transform: translateY(-10%);
-        opacity: 0;
-      }
-      .menu-enter-active {
-        transform: translateY(0);
-        opacity: 1;
-        transition: transform 300ms ease, opacity 300ms ease;
-      }
-      .menu-leave {
-        transform: translateY(0);
-        opacity: 1;
-      }
-      .menu-leave-active {
-        transform: translateY(-10%);
-        opacity: 0;
-        transition: transform 300ms ease, opacity 300ms ease;
-      }
-    </style>
+
+    
+
   </head>
   <body class="bg-white text-gray-800">
     <!-- HEADER -->
@@ -76,43 +58,6 @@
     </footer>
 
     <!-- SCRIPT -->
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const menuBtn = document.getElementById('menu-btn');
-        const menu = document.getElementById('menu');
-        const menuIcon = document.getElementById('menu-icon');
-
-        if (menuBtn && menu && menuIcon) {
-          menuBtn.addEventListener('click', () => {
-            const isHidden = menu.classList.contains('hidden');
-
-            if (isHidden) {
-              menu.classList.remove('hidden', 'menu-leave-active');
-              menu.classList.add('menu-enter');
-              requestAnimationFrame(() => {
-                menu.classList.add('menu-enter-active');
-                menu.classList.remove('menu-enter');
-              });
-            } else {
-              menu.classList.add('menu-leave');
-              requestAnimationFrame(() => {
-                menu.classList.add('menu-leave-active');
-                menu.classList.remove('menu-leave');
-              });
-              setTimeout(() => menu.classList.add('hidden'), 300);
-            }
-
-            // Cambia el icono entre ☰ y ✖️
-            if (isHidden) {
-              menuIcon.innerHTML =
-                '<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />';
-            } else {
-              menuIcon.innerHTML =
-                '<path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />';
-            }
-          });
-        }
-      });
-    </script>
+    <script src="/js/menu.js" defer></script>
   </body>
 </html>

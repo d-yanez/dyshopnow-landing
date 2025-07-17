@@ -4,17 +4,27 @@ FROM node:20-alpine
 # Directorio de trabajo
 WORKDIR /app
 
-# Copia solo los package.json
+# Copia solo package.json y package-lock.json
 COPY package*.json ./
 
-# Instala dependencias
+# Instala dependencias (compression, express-static-gzip, etc.)
 RUN npm install
 
-# Copia todo el código
+# Copia el resto del código
 COPY . .
 
-# Compila TailwindCSS
-RUN npx tailwindcss -i ./public/css/styles.css -o ./public/css/output.css
+# Compila y purga/minifica tu CSS (Tailwind en modo producción)
+RUN npm run tailwind:build
+
+# Opcional: instala brotli y gzip CLI para pre-comprimir assets
+RUN apk add --no-cache brotli gzip
+
+# Pre-comprime todos los archivos estáticos .js y .css en public/
+RUN find public -type f \( -iname '*.js' -o -iname '*.css' \) \
+    | while read f; do \
+        gzip -kf9 "$f"; \
+        brotli -q11 -f "$f"; \
+      done
 
 # Expone el puerto 8080 para Cloud Run
 ENV PORT=8080
