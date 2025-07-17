@@ -16,14 +16,14 @@ COPY . .
 # Compila y purga/minifica tu CSS (Tailwind en modo producción)
 RUN npm run tailwind:build
 
-# Opcional: instala brotli y gzip CLI para pre-comprimir assets
+# Instala brotli y gzip CLI para pre-comprimir assets
 RUN apk add --no-cache brotli gzip
 
 # Pre-comprime todos los archivos estáticos .js y .css en public/
 RUN find public -type f \( -iname '*.js' -o -iname '*.css' \) \
-    | while read f; do \
+    | while IFS= read -r f; do \
         gzip -kf9 "$f"; \
-        brotli -q11 -f "$f"; \
+        brotli -f -q 11 "$f"; \
       done
 
 # Expone el puerto 8080 para Cloud Run
