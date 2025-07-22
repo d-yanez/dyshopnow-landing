@@ -19,12 +19,19 @@ router.get('/:slug', (req, res) => {
     return res.status(404).send('Categoría no encontrada');
   }
 
+  // Renderizamos con los valores necesarios para Open Graph / Twitter
   res.render('category', {
     seo: {
       title: `${category.name} | Dyshopnow`,
       description: category.description
     },
-    category
+    category,
+    // para construir og:url y twitter:url
+    request: req,
+    // para og:type / twitter:card
+    pageType: 'website',
+    // para og:image / twitter:image
+    ogImage: category.banner
   });
 });
 

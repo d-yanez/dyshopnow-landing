@@ -8,7 +8,9 @@
     "dev": "nodemon src/app.js",
     "tailwind:watch": "npx tailwindcss -i ./public/css/styles.css -o ./public/css/output.css --watch",
     "dev:local": "concurrently \"npm run tailwind:watch\" \"npm run dev\"",
-    "tailwind:build": "NODE_ENV=production npx tailwindcss -i ./public/css/styles.css -o ./public/css/output.css --minify"
+    "tailwind:build": "NODE_ENV=production npx tailwindcss -i ./public/css/styles.css -o ./public/css/output.css --minify",
+    "generate:sitemap": "node scripts/generate-sitemap.js",
+    "generate:full-llms": "node scripts/generate-full-llms.js"
   },
   "dependencies": {
     "compression": "^1.8.0",

@@ -6,6 +6,40 @@
     <title><%= seo.title %></title>
     <meta name="description" content="<%= seo.description %>" />
     <link href="/css/output.css" rel="stylesheet" />
+      <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+        <% category.products.forEach((product, i) => { %>
+        {
+          "@type": "ListItem",
+          "position": <%= i + 1 %>,
+          "item": {
+            "@type": "Product",
+            "name": "<%= product.name.replace(/"/g,'\\"') %>",
+            "image": "<%= product.image.replace(/\.(jpe?g|png)$/, '.webp') %>",
+            "description": "<%= product.description.replace(/"/g,'\\"') %>",
+            "sku": "<%= product.sku %>",
+            "brand": {
+              "@type": "Thing",
+              "name": "<%= category.name %>"
+            },
+            "offers": {
+              "@type": "Offer",
+              "url": "<%= product.url %>",
+              "priceCurrency": "CLP",
+              "price": "<%= product.price %>",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        }<%= (i < category.products.length - 1) ? ',' : '' %>
+        <% }) %>
+      ]
+    }
+    </script>
+</head>
 
   </head>
   <body class="bg-white text-gray-800">
