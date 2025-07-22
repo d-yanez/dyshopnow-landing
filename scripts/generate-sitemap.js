@@ -16,9 +16,9 @@ urls.push({ loc: `${DOMAIN}/`, priority: '1.0' });
 
 // Por cada categoría…
 categories.forEach(cat => {
-  // url de categoría
+  // URL de categoría (ahora bajo /category/:slug)
   urls.push({
-    loc: `${DOMAIN}/${cat.slug}`,
+    loc: `${DOMAIN}/category/${cat.slug}`,
     priority: '0.8'
   });
 

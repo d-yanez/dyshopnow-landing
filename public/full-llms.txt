@@ -1,8 +1,8 @@
 /
-/blox-fruits
+/category/blox-fruits
 /product/caja-blox-fruits-de-la-serie-2-con-peluche-codigo-azar
 /product/1-mini-figura-blox-fruits-de-la-serie-2-al-azar-codigo
-/sonic
+/category/sonic
 /product/figura-shadow-linea-wave-2-de-sonic-3-oficial-22pts-articuld
 /product/pack-exclusivo-super-sonic-y-super-shadow-sonic-3-original
 /product/figuras-sonic-werehog-super-sonic-y-sonic-con-grind-shoes

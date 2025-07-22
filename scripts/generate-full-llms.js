@@ -5,22 +5,22 @@ const categories = require('../data/categories.json');
 
 const LINES = [];
 
-// home
+// Home
 LINES.push('/');
 
+// Categorías bajo /category/:slug
 categories.forEach(cat => {
-  LINES.push(`/${cat.slug}`);
+  LINES.push(`/category/${cat.slug}`);
+
+  // Productos (mantiene la ruta original /product/…)
   cat.products.forEach(prod => {
-    // extrae la parte tras el dominio
     const p = new URL(prod.url).pathname;
     LINES.push(p);
   });
 });
 
-fs.writeFileSync(
-  path.join(__dirname, '../public/full-llms.txt'),
-  LINES.join('\n'),
-  'utf8'
-);
+// Escribe full-llms.txt
+const outPath = path.join(__dirname, '../public/full-llms.txt');
+fs.writeFileSync(outPath, LINES.join('\n'), 'utf8');
 
-console.log(`✅ full-llms.txt generado con ${LINES.length} rutas.`);
+console.log(`✅ full-llms.txt generado con ${LINES.length} rutas en ${outPath}`);
