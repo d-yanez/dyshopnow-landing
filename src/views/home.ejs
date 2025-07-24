@@ -20,6 +20,42 @@
     <meta name="twitter:title"       content="<%= seo.title %>" />
     <meta name="twitter:description" content="<%= seo.description %>" />
     <meta name="twitter:image"       content="<%= ogImage %>" />
+    <!-- Schema.org / LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Dyshopnow",
+      "description": "Nuestra bodega (Dark Store) se encuentra en la comuna de Peñalolén. Las visitas son con previo aviso por WhatsApp para coordinar la exhibición de productos.",
+      "url": "https://landing.dyshopnow.cl",
+      "logo": "https://storage.googleapis.com/dyshopnow-landing-assets/logo/logo_512_512.png",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "telephone": "+56934626248",
+          "areaServed": "CL",
+          "availableLanguage": "es"
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "email",
+          "email": "tienda@dyshopnow.cl"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/dyshopnow/",
+        "https://www.youtube.com/@dyshopnow",
+        "https://www.dyshopnow.cl/"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Peñalolén",
+        "addressRegion": "Región Metropolitana",
+        "addressCountry": "CL"
+      }
+    }
+    </script>
   </head>
   <body class="bg-white text-gray-800">
     <!-- HEADER -->
