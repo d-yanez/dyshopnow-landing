@@ -45,6 +45,9 @@
               "priceCurrency": "CLP",
               "price": "<%= product.price %>",
               "availability": "https://schema.org/InStock",
+              <% if (product.priceValidUntil) { %>
+              "priceValidUntil": "<%= product.priceValidUntil %>",
+              <% } %>
               "hasMerchantReturnPolicy": "https://landing.dyshopnow.cl/politica-devoluciones",
               "shippingDetails": {
                 "@type": "OfferShippingDetails",
@@ -54,6 +57,31 @@
                 }
               }
             }
+          <% if (product.aggregateRating) { %>
+            ,
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "<%= product.aggregateRating.ratingValue %>",
+              "ratingCount": "<%= product.aggregateRating.ratingCount %>"
+            }
+          <% } %>
+          <% if (product.reviews) { %>
+            ,
+            "review": [
+              <% product.reviews.forEach((rev, j) => { %>
+                {
+                  "@type": "Review",
+                  "author": "<%= rev.author %>",
+                  "datePublished": "<%= rev.datePublished %>",
+                  "description": "<%= rev.description.replace(/"/g,'\\"') %>",
+                  "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "<%= rev.ratingValue %>"
+                  }
+                }<%= j < product.reviews.length - 1 ? ',' : '' %>
+              <% }) %>
+            ]
+          <% } %>
           }
         }<%= (i < category.products.length - 1) ? ',' : '' %>
         <% }) %>
