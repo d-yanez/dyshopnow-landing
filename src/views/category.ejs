@@ -6,7 +6,20 @@
     <title><%= seo.title %></title>
     <meta name="description" content="<%= seo.description %>" />
     <link href="/css/output.css" rel="stylesheet" />
-      <!-- Schema.org JSON-LD -->
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type"        content="<%= pageType || 'website' %>" />
+    <meta property="og:url"         content="https://landing.dyshopnow.cl<%= request.originalUrl %>" />
+    <meta property="og:title"       content="<%= seo.title %>" />
+    <meta property="og:description" content="<%= seo.description %>" />
+    <meta property="og:image"       content="<%= ogImage || category?.banner || '/default-og.jpg' %>" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:url"         content="https://landing.dyshopnow.cl<%= request.originalUrl %>" />
+    <meta name="twitter:title"       content="<%= seo.title %>" />
+    <meta name="twitter:description" content="<%= seo.description %>" />
+    <meta name="twitter:image"       content="<%= ogImage || category?.banner || '/default-og.jpg' %>" />
+        <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -23,7 +36,7 @@
             "description": "<%= product.description.replace(/"/g,'\\"') %>",
             "sku": "<%= product.sku %>",
             "brand": {
-              "@type": "Thing",
+              "@type": "Brand",
               "name": "<%= category.name %>"
             },
             "offers": {
@@ -31,7 +44,15 @@
               "url": "<%= product.url %>",
               "priceCurrency": "CLP",
               "price": "<%= product.price %>",
-              "availability": "https://schema.org/InStock"
+              "availability": "https://schema.org/InStock",
+              "hasMerchantReturnPolicy": "https://landing.dyshopnow.cl/politica-devoluciones",
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "CL"
+                }
+              }
             }
           }
         }<%= (i < category.products.length - 1) ? ',' : '' %>

@@ -39,7 +39,7 @@
         },
         {
           "@type": "ContactPoint",
-          "contactType": "email",
+          "contactType": "sales",
           "email": "tienda@dyshopnow.cl"
         }
       ],
@@ -53,7 +53,42 @@
         "addressLocality": "Peñalolén",
         "addressRegion": "Región Metropolitana",
         "addressCountry": "CL"
-      }
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.4695,
+        "longitude": -70.5992
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday","Tuesday","Wednesday","Thursday","Friday"
+          ],
+          "opens": "09:00",
+          "closes": "19:00",
+          "description": "Retiro en bodega (previa coordinación)"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"
+          ],
+          "opens": "18:00",
+          "closes": "22:00",
+          "description": "Despachos (compras antes de 13:00)"
+        }
+      ],
+      "specialOpeningHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "validFrom": "2025-01-01",
+          "validThrough": "2025-12-31",
+          "opens": "By appointment",
+          "closes": "By appointment",
+          "description": "Feriados: atención solo con aviso previo por WhatsApp"
+        }
+      ]
     }
     </script>
   </head>

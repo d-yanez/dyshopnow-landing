@@ -172,4 +172,7 @@ npm run dev:local
 npm run tailwind:build
 
 # Luego levanta tu servidor como siempre
-npm run dev
+npm run dev:local
+# Validación de resultados enriquecidos 
+https://search.google.com/test/rich-results
+objetivo: Mostrarse en Resultados de búsqueda de Google y detectar posibles errores que impidan su aparición.
