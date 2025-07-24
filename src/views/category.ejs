@@ -65,7 +65,7 @@
               "ratingCount": "<%= product.aggregateRating.ratingCount %>"
             }
           <% } %>
-          <% if (product.reviews) { %>
+          <% if (product.reviews && product.reviews.length) { %>
             ,
             "review": [
               <% product.reviews.forEach((rev, j) => { %>
