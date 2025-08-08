@@ -1,0 +1,22 @@
+{
+  "returnPolicy": {
+    "days": 7,
+    "conditions": "Solo productos con defecto de fábrica. Debe coordinarse vía WhatsApp antes de hacer la devolución."
+  },
+  "shipping": {
+    "domestic": {
+      "Santiago": "24 hrs",
+      "Regiones": "1-5 días hábiles"
+    },
+    "cutoffTime": "Compras realizadas antes de las 13:00 se despachan el mismo día para comunas de Santiago",
+    "freeShipping": {
+      "minPurchase": 29990,
+      "note": "Envio a todo Chile"
+    }
+  },
+  "pickup": {
+    "location": "Comuna de Peñalolén",
+    "schedule": "Lun-Vie 10:00-18:00 (previa cita por WhatsApp)"
+  },
+  "holidayService": "Atención solo con coordinación previa vía WhatsApp"
+}

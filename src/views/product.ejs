@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= product.seo?.title || product.name %> | Dyshopnow</title>
+  <meta name="description" content="<%= product.seo?.description || product.description %>" />
+  <link href="/css/output.css" rel="stylesheet" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="product" />
+  <meta property="og:url"         content="https://landing.dyshopnow.cl<%= request.originalUrl %>" />
+  <meta property="og:title"       content="<%= product.seo?.title || product.name %>" />
+  <meta property="og:description" content="<%= product.seo?.description || product.description %>" />
+  <meta property="og:image"       content="<%= product.images[0].replace(/\.(jpe?g|png)$/, '.webp') %>" />
+
+  <!-- Schema.org JSON-LD for Product with multiple images -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "<%= product.name.replace(/\"/g,'\\\"') %>",
+    "image": [
+      <% product.images.forEach((img, idx) => { %>
+      "<%= img.replace(/\.(jpe?g|png)$/, '.webp') %>"<%= idx < product.images.length - 1 ? ',' : '' %>
+      <% }) %>
+    ],
+    "description": "<%= (product.extendedDescription || product.description).replace(/\"/g,'\\\"') %>",
+    "sku": "<%= product.sku %>",
+    "brand": {
+      "@type": "Brand",
+      "name": "<%= product.brand || '' %>"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "<%= product.url %>",
+      "priceCurrency": "CLP",
+      "price": "<%= product.price %>",
+      "availability": "https://schema.org/<%= product.stock > 0 ? 'InStock' : 'OutOfStock' %>"
+    }<% if (product.aggregateRating) { %>,
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "<%= product.aggregateRating.ratingValue %>",
+      "ratingCount": "<%= product.aggregateRating.ratingCount %>"
+    }<% } %><% if (product.reviews && product.reviews.length) { %>,
+    "review": [
+      <% product.reviews.forEach((rev, i) => { %>
+      {
+        "@type": "Review",
+        "author": "<%= rev.author.replace(/\"/g,'\\\"') %>",
+        "datePublished": "<%= rev.datePublished %>",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "<%= rev.ratingValue %>"
+        },
+        "description": "<%= rev.description.replace(/\"/g,'\\\"') %>"
+      }<%= i < product.reviews.length - 1 ? ',' : '' %>
+      <% }) %>
+    ]<% } %>
+  }
+  </script>
+
+  <style>
+    /* Lightbox backdrop */
+    #lightbox-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 50;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+  <%- include('partials/header') %>
+
+  <main class="max-w-5xl mx-auto p-6 space-y-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- GALERÍA DE IMÁGENES -->
+      <div class="space-y-4">
+        <div id="main-image" class="overflow-hidden rounded-2xl shadow-lg h-96 flex items-center justify-center bg-white">
+          <picture>
+            <source srcset="<%= product.images[0].replace(/\.(jpe?g|png)$/, '.webp') %>" type="image/webp" />
+            <img
+              id="current-img"
+              src="<%= product.images[0] %>"
+              alt="<%= product.name %>"
+              loading="lazy"
+              class="max-h-full object-contain bg-white block hover:scale-105 transition-transform duration-500 cursor-pointer"
+            />
+          </picture>
+        </div>
+        <div class="flex space-x-2 overflow-x-auto">
+          <% product.images.forEach((img, idx) => { %>
+            <button class="flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden shadow-md" data-index="<%= idx %>">
+              <picture>
+                <source srcset="<%= img.replace(/\.(jpe?g|png)$/, '.webp') %>" type="image/webp" />
+                <img src="<%= img %>" alt="thumb" class="w-full h-full object-cover" />
+              </picture>
+            </button>
+          <% }) %>
+        </div>
+      </div>
+
+      <!-- DETALLES DEL PRODUCTO -->
+      <div class="space-y-4">
+        <h1 class="text-4xl font-bold"><%= product.name %></h1>
+        <p class="text-gray-700"><%= product.extendedDescription || product.description %></p>
+
+        <ul class="space-y-2 text-gray-600">
+          <li><strong>SKU:</strong> <%= product.sku %></li>
+          <li><strong>Precio:</strong> $<%= product.price.toLocaleString() %></li>
+          <li><strong>Disponibilidad:</strong> <%= product.stock > 0 ? 'En stock' : 'Agotado' %></li>
+        </ul>
+
+        <!-- Acordeón Políticas -->
+        <button id="toggle-policies" class="flex items-center justify-between w-full bg-gray-100 p-4 rounded-lg">
+          <span class="font-semibold">Políticas</span>
+          <svg id="icon-toggle" class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div id="policies-content" class="mt-2 bg-gray-50 border border-gray-200 rounded-lg p-4 hidden">
+          <dl class="space-y-4 text-gray-700">
+            <div>
+              <dt class="font-medium">Política de devoluciones</dt>
+              <dd>Hasta 7 días — Solo productos con defecto de fábrica. Debe coordinarse vía WhatsApp antes de la devolución.</dd>
+            </div>
+            <div>
+              <dt class="font-medium">Despachos</dt>
+              <dd>
+                <strong>Santiago:</strong> 24 hrs<br/>
+                <strong>Regiones:</strong> 1–5 días hábiles<br/>
+                <em class="block text-sm text-gray-500">Compras antes de 13:00 se despachan el mismo día</em><br/>
+                <strong>Envío gratis desde:</strong> $29.990 (todo Chile)
+              </dd>
+            </div>
+            <div>
+              <dt class="font-medium">Retiro en bodega</dt>
+              <dd>Comuna de Peñalolén — Lun–Vie 10:00–18:00 (previa cita por WhatsApp)</dd>
+            </div>
+            <div>
+              <dt class="font-medium">Atención feriados</dt>
+              <dd>Solo con coordinación previa vía WhatsApp</dd>
+            </div>
+          </dl>
+        </div>
+        <script>
+          const toggleBtn = document.getElementById('toggle-policies');
+          const policiesContent = document.getElementById('policies-content');
+          const toggleIcon = document.getElementById('icon-toggle');
+          toggleBtn.addEventListener('click', () => {
+            policiesContent.classList.toggle('hidden');
+            toggleIcon.classList.toggle('rotate-180');
+          });
+        </script>
+
+        <div>
+          <a
+            href="<%= product.buyUrl %>?utm_source=landing&utm_medium=button&utm_campaign=dyshopnow"
+            target="_blank"
+            class="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 hover:shadow-xl transition"
+          >
+            Ir a comprar
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <%- include('partials/footer') %>
+
+  <!-- LIGHTBOX BACKDROP -->
+  <div id="lightbox-backdrop" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Preview" class="max-w-full max-h-full rounded-lg shadow-xl" />
+  </div>
+
+  <script>
+    // Array of product image URLs passed from the server
+    // @ts-ignore: EJS tag
+    const imageSources = <%- JSON.stringify(product.images) %>;
+    let currentIndex = 0;
+
+    // References to DOM elements
+    const sourceWebp = document.querySelector('#main-image picture source');
+    const thumbnails = document.querySelectorAll('[data-index]');
+    const mainImg = document.getElementById('current-img');
+    const backdrop = document.getElementById('lightbox-backdrop');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    // Update the main image by index
+    function updateMainImage(idx) {
+      currentIndex = idx;
+      const newSrc = imageSources[currentIndex];
+      mainImg.src = newSrc;
+      sourceWebp.srcset = newSrc.replace(/\.(jpe?g|png)$/, '.webp');
+    }
+
+    // Thumbnail click handler
+    thumbnails.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const idx = parseInt(btn.getAttribute('data-index'), 10);
+        updateMainImage(idx);
+      });
+    });
+
+    // Main image click opens lightbox
+    mainImg.addEventListener('click', () => {
+      lightboxImg.src = mainImg.src.replace(/\.(jpe?g|png)$/, '.webp');
+      backdrop.style.display = 'flex';
+    });
+
+    // Close lightbox on backdrop click
+    backdrop.addEventListener('click', closeLightbox);
+
+    function closeLightbox() {
+      backdrop.style.display = 'none';
+    }
+
+    // Keyboard navigation for lightbox
+    document.addEventListener('keydown', e => {
+      if (backdrop.style.display === 'flex') {
+        if (e.key === 'ArrowRight') {
+          const next = (currentIndex + 1) % imageSources.length;
+          updateMainImage(next);
+          lightboxImg.src = imageSources[currentIndex].replace(/\.(jpe?g|png)$/, '.webp');
+        } else if (e.key === 'ArrowLeft') {
+          const prev = (currentIndex - 1 + imageSources.length) % imageSources.length;
+          updateMainImage(prev);
+          lightboxImg.src = imageSources[currentIndex].replace(/\.(jpe?g|png)$/, '.webp');
+        } else if (e.key === 'Escape') {
+          closeLightbox();
+        }
+      }
+    });
+  </script>
+</body>
+</html>

@@ -19,78 +19,8 @@
     <meta name="twitter:title"       content="<%= seo.title %>" />
     <meta name="twitter:description" content="<%= seo.description %>" />
     <meta name="twitter:image"       content="<%= ogImage || category?.banner || '/default-og.jpg' %>" />
-        <!-- Schema.org JSON-LD -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "itemListElement": [
-        <% category.products.forEach((product, i) => { %>
-        {
-          "@type": "ListItem",
-          "position": <%= i + 1 %>,
-          "item": {
-            "@type": "Product",
-            "name": "<%= product.name.replace(/"/g,'\\"') %>",
-            "image": "<%= product.image.replace(/\.(jpe?g|png)$/, '.webp') %>",
-            "description": "<%= product.description.replace(/"/g,'\\"') %>",
-            "sku": "<%= product.sku %>",
-            "brand": {
-              "@type": "Brand",
-              "name": "<%= category.name %>"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": "<%= product.url %>",
-              "priceCurrency": "CLP",
-              "price": "<%= product.price %>",
-              "availability": "https://schema.org/InStock",
-              <% if (product.priceValidUntil) { %>
-              "priceValidUntil": "<%= product.priceValidUntil %>",
-              <% } %>
-              "hasMerchantReturnPolicy": "https://landing.dyshopnow.cl/politica-devoluciones",
-              "shippingDetails": {
-                "@type": "OfferShippingDetails",
-                "shippingDestination": {
-                  "@type": "DefinedRegion",
-                  "addressCountry": "CL"
-                }
-              }
-            }
-          <% if (product.aggregateRating) { %>
-            ,
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "<%= product.aggregateRating.ratingValue %>",
-              "ratingCount": "<%= product.aggregateRating.ratingCount %>"
-            }
-          <% } %>
-          <% if (product.reviews && product.reviews.length) { %>
-            ,
-            "review": [
-              <% product.reviews.forEach((rev, j) => { %>
-                {
-                  "@type": "Review",
-                  "author": "<%= rev.author %>",
-                  "datePublished": "<%= rev.datePublished %>",
-                  "description": "<%= rev.description.replace(/"/g,'\\"') %>",
-                  "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "<%= rev.ratingValue %>"
-                  }
-                }<%= j < product.reviews.length - 1 ? ',' : '' %>
-              <% }) %>
-            ]
-          <% } %>
-          }
-        }<%= (i < category.products.length - 1) ? ',' : '' %>
-        <% }) %>
-      ]
-    }
-    </script>
+     
 </head>
-
-  </head>
   <body class="bg-white text-gray-800">
     <!-- HEADER -->
     <%- include('partials/header') %>
@@ -144,7 +74,7 @@
             <p class="text-sm mt-2 mb-4"><%= product.description %></p>
             <!-- Botón con glow -->
             <div class="flex justify-center">
-              <a href="<%= product.url %>?utm_source=landing&utm_medium=button&utm_campaign=dyshopnow" target="_blank"
+              <a href="<%= product.url%>" 
                 class="inline-block bg-blue-600 text-white font-semibold px-4 py-2 rounded-lg shadow-md transition-all duration-300 ease-in-out
                       hover:bg-blue-700 hover:shadow-xl hover:shadow-blue-400/50 hover:-translate-y-1 hover:scale-105 active:scale-95">
                 Ver producto
