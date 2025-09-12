@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <%- include('../partials/head-seo.ejs') %>
+  <style>
+    :root{
+      --primary:<%= (cfg.theme && cfg.theme.primary) ? cfg.theme.primary : '#0D6EFD' %>;
+      --dark:<%= (cfg.theme && cfg.theme.dark) ? cfg.theme.dark : '#0A0F1A' %>;
+      --light:<%= (cfg.theme && cfg.theme.light) ? cfg.theme.light : '#FFFFFF' %>;
+    }
+  </style>
+</head>
+<body class="bg-[#0a0f1a] text-white">
+  <!-- Top -->
+  <div class="w-full bg-[#0b1220] text-sm text-gray-300">
+    <div class="mx-auto max-w-7xl px-4 py-2 flex flex-wrap gap-3 justify-center md:justify-between">
+      <div>🚚 Envíos a todo Chile</div>
+      <div>⚡ Despacho mismo día en Santiago</div>
+      <% if (cfg.whatsapp) { %>
+        <a href="https://wa.me/<%= cfg.whatsapp %>" class="text-blue-300 hover:text-blue-200">💬 WhatsApp</a>
+      <% } %>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="mx-auto max-w-7xl px-4 py-10 grid md:grid-cols-2 gap-8 items-center">
+    <div>
+      <h1 class="text-4xl md:text-5xl font-semibold"><%= (cfg.hero && cfg.hero.h1) ? cfg.hero.h1 : '' %></h1>
+      <p class="text-gray-300 mt-3"><%= (cfg.hero && cfg.hero.sub) ? cfg.hero.sub : '' %></p>
+      <div class="mt-6 flex gap-3">
+        <% if (cfg.hero && cfg.hero.cta_primary) { %>
+          <a href="<%= cfg.hero.cta_primary.href %>" class="bg-[var(--primary)] hover:bg-blue-500 px-5 py-3 rounded-xl">
+            <%= cfg.hero.cta_primary.label %>
+          </a>
+        <% } %>
+        <% if (cfg.hero && cfg.hero.cta_secondary) { %>
+          <a href="<%= cfg.hero.cta_secondary.href %>" class="border border-white/20 hover:border-white/40 px-5 py-3 rounded-xl">
+            <%= cfg.hero.cta_secondary.label %>
+          </a>
+        <% } %>
+      </div>
+    </div>
+    <div>
+      <% if (cfg.hero && cfg.hero.video && cfg.hero.video.enabled) { %>
+        <video class="rounded-2xl w-full shadow-lg" controls poster="<%= cfg.hero.video.poster %>" preload="metadata">
+          <source src="<%= cfg.hero.video.url %>" type="video/mp4" />
+        </video>
+      <% } else { %>
+        <img src="<%= (cfg.hero && cfg.hero.image) ? cfg.hero.image : '' %>" alt="Hero" class="rounded-2xl w-full shadow-lg" loading="eager">
+      <% } %>
+    </div>
+  </section>
+
+  <!-- Categorías -->
+  <section id="categorias" class="mx-auto max-w-7xl px-4 py-8">
+    <h2 class="text-2xl md:text-3xl font-semibold mb-3">Categorías</h2>
+    <% var __cats = (cfg && cfg.categories) ? cfg.categories : []; 
+       for (var ci = 0; ci < __cats.length; ci++) { 
+         var cat = __cats[ci]; %>
+      <article class="mb-8">
+        <h3 class="text-xl font-semibold"><%= cat.name %></h3>
+        <p class="text-gray-300 mb-4"><%= cat.seo_text %></p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <% var __prods = (cat && cat.products) ? cat.products : []; 
+             for (var pi = 0; pi < __prods.length; pi++) { 
+               var p = __prods[pi]; %>
+            <div class="bg-white/5 rounded-xl p-4">
+              <img src="<%= p.image %>" alt="<%= p.name %>" class="rounded-lg w-full aspect-[4/3] object-cover" loading="lazy">
+              <h4 class="mt-3 font-semibold"><%= p.name %></h4>
+              <p class="text-blue-300 mt-1">$<%= (p.price).toLocaleString('es-CL') %></p>
+              <a href="<%= p.href_bsale %>" class="mt-3 inline-block bg-[var(--primary)] hover:bg-blue-500 px-4 py-2 rounded-lg">Ver más</a>
+            </div>
+          <% } %>
+        </div>
+        <% if (cat.href_bsale_category) { %>
+          <div class="mt-4">
+            <a href="<%= cat.href_bsale_category %>" class="text-blue-300 hover:text-blue-200">Ver toda la categoría →</a>
+          </div>
+        <% } %>
+      </article>
+  <% } %>
+  </section>
+
+  <!-- Kits -->
+  <% if (cfg.kits && cfg.kits.enabled && (cfg.kits.items||[]).length) { %>
+  <section id="kits" class="mx-auto max-w-7xl px-4 py-8">
+    <h2 class="text-2xl md:text-3xl font-semibold mb-3"><%= cfg.kits.title %></h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <% var __kits = (cfg.kits && cfg.kits.items) ? cfg.kits.items : []; 
+         for (var ki = 0; ki < __kits.length; ki++) { 
+           var k = __kits[ki]; %>
+        <div class="bg-white/5 rounded-xl p-5 flex gap-5 items-center">
+          <img src="<%= k.image %>" alt="<%= k.name %>" class="w-40 h-40 object-cover rounded-lg">
+          <div>
+            <h3 class="font-semibold"><%= k.name %></h3>
+            <p class="text-blue-200 mt-1">$<%= (k.price).toLocaleString('es-CL') %></p>
+            <a href="<%= k.href_bsale %>" class="mt-3 inline-block bg-[var(--primary)] hover:bg-blue-500 px-4 py-2 rounded-lg">Comprar ahora</a>
+          </div>
+        </div>
+  <% } %>
+    </div>
+    <% if (cfg.kits.href_bsale_category) { %>
+      <div class="mt-4">
+        <a href="<%= cfg.kits.href_bsale_category %>" class="text-blue-300 hover:text-blue-200">Ver todos los kits →</a>
+      </div>
+    <% } %>
+  </section>
+  <% } %>
+
+  <script defer src="/js/neo-k-landing.js"></script>
+</body>
+</html>

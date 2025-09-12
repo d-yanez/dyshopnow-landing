@@ -6,7 +6,8 @@ const expressStaticGzip = require('express-static-gzip');
 const nocache               = require('nocache');
 const homeRouter            = require('./routes/home');
 const categoryRouter        = require('./routes/category');
-const productRouter         = require('./routes/product')
+const productRouter         = require('./routes/product');
+const landingRouter         = require('./routes/landing');
 
 const app  = express();
 const PORT = process.env.PORT || 3000;
@@ -37,6 +38,7 @@ app.use('/', homeRouter);
 //app.use('/', categoryRouter);
 app.use('/category', categoryRouter);   // Ahora: /category/:slug
 app.use('/product', productRouter);
+app.use('/landing', landingRouter);
 
 
 // 2) Servir /public (css, js, images, robots.txt, sitemap.xml) ANTES de las rutas dinámicas

@@ -1,0 +1,128 @@
+{
+  "template": "neo-k-landing",
+  "meta": {
+    "slug": "demon-hunter-kpop",
+    "title": "Demon Hunter K-Pop en Chile | Decoración, Peluches, Stickers y Lightsticks",
+    "description": "Compra productos de Demon Hunter K-Pop: decoración, peluches de 20 cm, stickers y lightsticks. Envío a todo Chile y despacho mismo día en Santiago.",
+    "canonical": "https://www.dyshopnow.cl/landing/demon-hunter-kpop",
+    "ogImage": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/hero/og_1200x630.webp"
+  },
+  "theme": { "primary": "#0D6EFD", "dark": "#0A0F1A", "light": "#FFFFFF" },
+  "whatsapp": "56912345678",
+  "hero": {
+    "h1": "Demon Hunter K-Pop en Chile",
+    "sub": "Las guerreras K-Pop de Netflix, ahora en tu colección y tu fiesta.",
+    "image": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/hero/hero_dhk.webp",
+    "video": {
+      "enabled": true,
+      "url": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/video/hero_dhk.mp4",
+      "poster": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/hero/hero_dhk.webp"
+    },
+    "badges": ["★ 4,7 reseñas", "🛡 Compra segura", "🚚 Envío rápido"],
+    "cta_primary": { "label": "Ver colección", "href": "#categorias" },
+    "cta_secondary": { "label": "Ofertas de lanzamiento", "href": "#destacados" }
+  },
+  "story": {
+    "title": "¿Por qué todos hablan de Demon Hunter K-Pop?",
+    "paragraph": "Demon Hunter K-Pop mezcla acción y estética idol. Si planeas una fiesta temática o buscas un regalo original, aquí encontrarás productos exclusivos con envío rápido y stock limitado.",
+    "bullets": ["Cumpleaños temáticos", "Regalos y colección", "Decoración fácil y rápida"]
+  },
+  "categories": [
+  {
+    "id": "decoracion",
+    "name": "Decoración",
+    "seo_text": "Decora tu fiesta Demon Hunter con vasos, platos y mantel temático Huntrix Kpop. Productos originales que darán vida y estilo único a tus celebraciones.",
+    "href_bsale_category": "https://www.dyshopnow.cl/search?search_text=demon%2Bhunter%2Bcotillon&limit=20&order=relevance&way=DESC&utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp",
+    "products": [
+      {
+        "id": "1694593569",
+        "sku": "1694593569",
+        "name": "Vasos Huntrix Demon Hunters Pack 10 Fiesta 9cm Para Cotillon",
+        "description": "Pack de 10 vasos Huntrix Demon Hunters inspirados en la canción Golden. Cartón desechable de calidad, 9 cm de alto, 5 cm base y 7 cm boca superior. Ideales para bebidas frías o calientes. Resultado: una mesa vibrante con estilo único.",
+        "price": 5990,
+        "badge": "Stock limitado",
+        "image": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/decoracion/1694593569-1.webp",
+        "href_bsale": "https://www.dyshopnow.cl/product/vasos-huntrix-demon-hunters-pack-10-fiesta-9cm-para-cotillon?utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp"
+      },
+      {
+        "id": "1694476693",
+        "sku": "1694476693",
+        "name": "Pack 10 Platos Huntrix Demon Hunters 18cm Fiestas Cumpleaños",
+        "description": "Pack de 10 platos Huntrix Demon Hunters de 18 cm. Fabricados en cartón resistente, con diseño vibrante y temático. Perfectos para cumpleaños y eventos. Resultado: una mesa auténtica y llena de color para tus invitados.",
+        "price": 5990,
+        "badge": "Stock limitado",
+        "image": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/decoracion/1694476693-1.webp",
+        "href_bsale": "https://www.dyshopnow.cl/product/pack-10-platos-huntrix-demon-hunters-18cm-fiestas-cumpleanos?utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp"
+      },
+      {
+        "id": "1694645357",
+        "sku": "1694645357",
+        "name": "Mantel Huntrix Demon Hunter Plastico 108x180cm Para Cotillon",
+        "description": "Mantel plástico Demon Hunter de 108×180 cm, ligero y resistente. Impresión a color con personajes en vestuario icónico. Resultado: mesa temática llamativa que protege y transforma tu fiesta en un recuerdo inolvidable.",
+        "price": 5990,
+        "badge": "Stock limitado",
+        "image": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/decoracion/1694645357-1.webp",
+        "href_bsale": "https://www.dyshopnow.cl/product/mantel-huntrix-demon-hunter-plastico-108x180cm-para-cotillon?utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp"
+      }
+    ]
+  }
+],
+"kits": {
+  "enabled": true,
+  "title": "Kits que ahorran",
+  "href_bsale_category": "https://www.dyshopnow.cl/search?search_text=kit%2Bdemon%2Bhunters&limit=20&order=relevance&way=DESC&utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp",
+  "items": [
+    {
+      "id": "3082403168",
+      "sku": "3082403168",
+      "name": "Kit Fiesta Cumpleaños Huntrix Kpop Demon Hunter 30 Pzs.",
+      "description": "Este kit incluye 16 globos con diseños exclusivos, 1 banner 'Happy Birthday', 1 topper grande para la torta y 12 toppers para cupcakes. Todo lo necesario para una ambientación temática épica en minutos.",
+      "price": 21990,
+      "benefit": "Set completo",
+      "image": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/decoracion/kit-3082403168-1.webp",
+      "href_bsale": "https://www.dyshopnow.cl/product/kit-fiesta-cumpleanos-huntrix-kpop-demon-hunter-30-pzs?utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp",
+      "includes": [
+        "16 globos de látex",
+        "1 banner 'Happy Birthday'",
+        "1 topper grande para la torta",
+        "12 toppers para cupcakes"
+      ]
+    },
+    {
+      "id": "3134745358",
+      "sku": "3134745358",
+      "name": "Kit Cumpleaños Huntrix Demon Hunter Saja Boys Cotillón",
+      "description": "El Kit Fiesta Cumpleaños Huntrix Demon Hunter Saja Boys incluye 16 globos con diseños de Mira, Rumi, Zoey y Jinu, 1 banner 'Happy Birthday' ilustrado, 12 adornos para cupcakes y 1 topper de torta del grupo completo. Una decoración temática vibrante, fácil de instalar y lista para sorprender a todos los fans.",
+      "price": 21990,
+      "benefit": "Set completo",
+      "image": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/decoracion/3134745358-1.webp",
+      "href_bsale": "https://www.dyshopnow.cl/product/kit-cumpleanos-huntrix-demon-hunter-saja-boys-cotillon?utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp",
+      "includes": [
+        "16 globos de látex",
+        "1 banner 'Happy Birthday'",
+        "1 topper grande para la torta",
+        "12 toppers para cupcakes"
+      ]
+    }
+  ]
+},
+  "social_proof": {
+    "reviews": [
+      { "name": "María P.", "text": "Llegó altiro, mi hija feliz con la fiesta Demon Hunter.", "rating": 5 }
+    ],
+    "benefits": [
+      "Envío a todo Chile",
+      "Despacho mismo día (Stgo, antes 13:00)",
+      "Productos en tendencia",
+      "Atención rápida por WhatsApp"
+    ]
+  },
+  "faq": [
+    { "q": "¿Cuánto demora el envío?", "a": "Santiago: mismo día comprando antes de 13:00. Regiones: 1–3 días hábiles con Chilexpress o Starken." }
+  ],
+  "cta_final": {
+    "title": "Llévate lo más nuevo de Demon Hunter K-Pop hoy",
+    "button": { "label": "Ver colección completa", "href": "#categorias" },
+    "note": "Stock limitado — reposición semanal."
+  }
+}
