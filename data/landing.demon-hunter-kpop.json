@@ -14,9 +14,10 @@
     "sub": "Las guerreras K-Pop de Netflix, ahora en tu colección y tu fiesta.",
     "image": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/hero/hero_dhk.webp",
     "video": {
-      "enabled": true,
-      "url": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/video/hero_dhk.mp4",
-      "poster": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/hero/hero_dhk.webp"
+    "enabled": true,
+    "poster": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/hero/hero_dhk.webp",
+    "url_webm": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/video/demon-hunter-hero.webm",
+    "url_mp4":  "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/video/demon-hunter-hero.mp4"
     },
     "badges": ["★ 4,7 reseñas", "🛡 Compra segura", "🚚 Envío rápido"],
     "cta_primary": { "label": "Ver colección", "href": "#categorias" },

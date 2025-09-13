@@ -41,10 +41,40 @@
       </div>
     </div>
     <div>
-      <% if (cfg.hero && cfg.hero.video && cfg.hero.video.enabled) { %>
-        <video class="rounded-2xl w-full shadow-lg" controls poster="<%= cfg.hero.video.poster %>" preload="metadata">
-          <source src="<%= cfg.hero.video.url %>" type="video/mp4" />
-        </video>
+     <% if (cfg.hero && cfg.hero.video && cfg.hero.video.enabled) { %>
+  <video
+    id="heroVideo"
+    class="rounded-2xl w-full shadow-lg"
+    autoplay muted loop playsinline
+    controls
+    crossorigin="anonymous"
+    poster="<%= (cfg.hero.video && cfg.hero.video.poster) ? cfg.hero.video.poster : '' %>"
+    preload="metadata">
+
+    <% if (cfg.hero.video && cfg.hero.video.url_webm) { %>
+      <source src="<%= cfg.hero.video.url_webm %>" type="video/webm">
+    <% } %>
+
+    <% if (cfg.hero.video && cfg.hero.video.url_mp4) { %>
+      <source src="<%= cfg.hero.video.url_mp4 %>" type="video/mp4">
+    <% } %>
+
+    <% if (!(cfg.hero.video && (cfg.hero.video.url_webm || cfg.hero.video.url_mp4)) && (cfg.hero.video && cfg.hero.video.url)) { %>
+      <source src="<%= cfg.hero.video.url %>" type="video/mp4">
+    <% } %>
+
+    Your browser does not support HTML5 video.
+  </video>
+
+  <script>
+    (function(){
+      var v = document.getElementById('heroVideo');
+      if(!v) return;
+      v.addEventListener('error', function(e){ console.log('VIDEO_ERROR', e); });
+      v.addEventListener('loadeddata', function(){ console.log('VIDEO_LOADED', v.currentSrc); });
+      v.addEventListener('play', function(){ console.log('VIDEO_PLAY', v.currentSrc); });
+    })();
+  </script>
       <% } else { %>
         <img src="<%= (cfg.hero && cfg.hero.image) ? cfg.hero.image : '' %>" alt="Hero" class="rounded-2xl w-full shadow-lg" loading="eager">
       <% } %>
