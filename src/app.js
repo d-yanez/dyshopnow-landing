@@ -40,6 +40,10 @@ app.use('/category', categoryRouter);   // Ahora: /category/:slug
 app.use('/product', productRouter);
 app.use('/landing', landingRouter);
 
+app.use((req,res,next)=>{
+  res.set('X-Robots-Tag','index, follow');
+  next();
+});
 
 // 2) Servir /public (css, js, images, robots.txt, sitemap.xml) ANTES de las rutas dinámicas
 app.use(

@@ -3,4 +3,4 @@ Allow: /
 
 # Indica dónde está tu sitemap
 Sitemap: https://landing.dyshopnow.cl/sitemap.xml
-Host: landing.dyshopnow.cl
+Host: landing.dyshopnow.cl/landing

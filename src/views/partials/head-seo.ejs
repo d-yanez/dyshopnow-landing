@@ -1,8 +1,115 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="googlebot" content="index,follow">
+
 <title><%= (cfg && cfg.meta && cfg.meta.title) ? cfg.meta.title : 'Landing' %></title>
 <meta name="description" content="<%= (cfg && cfg.meta && cfg.meta.description) ? cfg.meta.description : '' %>">
+<link rel="canonical" href="<%= (cfg && cfg.meta && cfg.meta.canonical) ? cfg.meta.canonical : '' %>">
+
+<meta property="og:site_name" content="Dyshopnow">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="<%= (cfg && cfg.meta && cfg.meta.title) ? cfg.meta.title : '' %>">
+<meta property="og:description" content="<%= (cfg && cfg.meta && cfg.meta.description) ? cfg.meta.description : '' %>">
+<meta property="og:url" content="<%= (cfg && cfg.meta && cfg.meta.canonical) ? cfg.meta.canonical : '' %>">
+<meta property="og:image" content="<%= (cfg && cfg.meta && cfg.meta.ogImage) ? cfg.meta.ogImage : '' %>">
+<meta property="og:locale" content="es_CL">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="<%= (cfg && cfg.meta && cfg.meta.title) ? cfg.meta.title : '' %>">
+<meta name="twitter:description" content="<%= (cfg && cfg.meta && cfg.meta.description) ? cfg.meta.description : '' %>">
+<meta name="twitter:image" content="<%= (cfg && cfg.meta && cfg.meta.ogImage) ? cfg.meta.ogImage : '' %>">
+
+<!-- Tailwind por CDN -->
 <script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Perf: preconnect/dns-prefetch a tu bucket -->
 <link rel="dns-prefetch" href="https://storage.googleapis.com">
 <link rel="preconnect" href="https://storage.googleapis.com" crossorigin>
 <link rel="icon" type="image/x-icon" href="/favicon.png"> 
+
+<!-- Opcional: prefetch del poster (mejora LCP si el video tarda) -->
+<% if (cfg && cfg.hero && cfg.hero.video && cfg.hero.video.poster) { %>
+<link rel="prefetch" as="image" href="<%= cfg.hero.video.poster %>">
+<% } %>
+
+<% 
+  function safe(str){ return String(str||'').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  var url = (cfg && cfg.meta && cfg.meta.canonical) ? cfg.meta.canonical : '';
+  var title = (cfg && cfg.meta && cfg.meta.title) ? cfg.meta.title : '';
+  var desc = (cfg && cfg.meta && cfg.meta.description) ? cfg.meta.description : '';
+  var og = (cfg && cfg.meta && cfg.meta.ogImage) ? cfg.meta.ogImage : '';
+  var products = [];
+  if (cfg && cfg.categories) {
+    for (var i=0;i<cfg.categories.length;i++){
+      var cat = cfg.categories[i];
+      if (cat && cat.products) {
+        for (var j=0;j<cat.products.length;j++){
+          var p = cat.products[j];
+          products.push({
+            "@type":"Product",
+            "name": p && p.name || "",
+            "image": p && p.image || "",
+            "sku": p && p.sku || p && p.id || "",
+            "offers": {
+              "@type":"Offer",
+              "price": p && p.price || "",
+              "priceCurrency":"CLP",
+              "url": p && p.href_bsale || ""
+            }
+          });
+        }
+      }
+    }
+  }
+  var kitsList = [];
+  if (cfg && cfg.kits && cfg.kits.items){
+    for (var k=0;k<cfg.kits.items.length;k++){
+      var item = cfg.kits.items[k];
+      kitsList.push({
+        "@type":"Product",
+        "name": item && item.name || "",
+        "image": item && item.image || "",
+        "sku": item && item.sku || item && item.id || "",
+        "offers": {
+          "@type":"Offer",
+          "price": item && item.price || "",
+          "priceCurrency":"CLP",
+          "url": item && item.href_bsale || ""
+        }
+      });
+    }
+  }
+%>
+<script type="application/ld+json">
+<%- JSON.stringify({
+  "@context":"https://schema.org",
+  "@type":"CollectionPage",
+  "name": title,
+  "description": desc,
+  "url": url,
+  "image": og,
+  "hasPart": [
+    {
+      "@type":"ItemList",
+      "name":"Productos Demon Hunter K-Pop",
+      "itemListElement": products.map(function(p,i){ 
+        return {"@type":"ListItem","position": i+1, "item": p}; 
+      })
+    },
+    {
+      "@type":"ItemList",
+      "name":"Kits Demon Hunter K-Pop",
+      "itemListElement": kitsList.map(function(p,i){ 
+        return {"@type":"ListItem","position": i+1, "item": p}; 
+      })
+    }
+  ]
+}, null, 2) %>
+</script>
