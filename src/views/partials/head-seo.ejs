@@ -11,7 +11,6 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 
-
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="<%= (cfg && cfg.meta && cfg.meta.title) ? cfg.meta.title : '' %>">
@@ -19,6 +18,12 @@
 <meta property="og:url" content="<%= (cfg && cfg.meta && cfg.meta.canonical) ? cfg.meta.canonical : '' %>">
 <meta property="og:image" content="<%= (cfg && cfg.meta && cfg.meta.ogImage) ? cfg.meta.ogImage : '' %>">
 <meta property="og:locale" content="es_CL">
+<meta property="og:video" content="https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/video/demon-hunter-hero.mp4">
+<meta property="og:video:secure_url" content="https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/video/demon-hunter-hero.mp4">
+<meta property="og:video:type" content="video/mp4">
+<meta property="og:video:width" content="1280">
+<meta property="og:video:height" content="720">
+<meta name="twitter:image:alt" content="Colección Demon Hunter K-Pop: decoración y kits para cumpleaños.">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
@@ -29,87 +34,166 @@
 <!-- Tailwind por CDN -->
 <script src="https://cdn.tailwindcss.com"></script>
 
-<!-- Perf: preconnect/dns-prefetch a tu bucket -->
+<!-- Perf -->
 <link rel="dns-prefetch" href="https://storage.googleapis.com">
 <link rel="preconnect" href="https://storage.googleapis.com" crossorigin>
-<link rel="icon" type="image/x-icon" href="/favicon.png"> 
-
-<!-- Opcional: prefetch del poster (mejora LCP si el video tarda) -->
 <% if (cfg && cfg.hero && cfg.hero.video && cfg.hero.video.poster) { %>
 <link rel="prefetch" as="image" href="<%= cfg.hero.video.poster %>">
 <% } %>
 
-<% 
-  function safe(str){ return String(str||'').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
-  var url = (cfg && cfg.meta && cfg.meta.canonical) ? cfg.meta.canonical : '';
-  var title = (cfg && cfg.meta && cfg.meta.title) ? cfg.meta.title : '';
-  var desc = (cfg && cfg.meta && cfg.meta.description) ? cfg.meta.description : '';
-  var og = (cfg && cfg.meta && cfg.meta.ogImage) ? cfg.meta.ogImage : '';
-  var products = [];
-  if (cfg && cfg.categories) {
-    for (var i=0;i<cfg.categories.length;i++){
-      var cat = cfg.categories[i];
-      if (cat && cat.products) {
-        for (var j=0;j<cat.products.length;j++){
-          var p = cat.products[j];
-          products.push({
+<!-- Favicons (si los sirves desde GCS) -->
+<link rel="icon" type="image/x-icon" href="/favicon.png"> 
+<meta name="theme-color" content="<%= (cfg && cfg.theme && cfg.theme.dark) ? cfg.theme.dark : '#0A0F1A' %>">
+
+<%
+  // Helpers
+  function toCLP(n){ return Number(n||0); }
+  function safeStr(s){ return String(s||''); }
+
+  // Build dynamic Product lists from categories
+  var productsList = [];
+  if (cfg && Array.isArray(cfg.categories)) {
+    for (var ci=0; ci<cfg.categories.length; ci++){
+      var cat = cfg.categories[ci];
+      if (cat && Array.isArray(cat.products)){
+        for (var pi=0; pi<cat.products.length; pi++){
+          var p = cat.products[pi];
+          productsList.push({
             "@type":"Product",
-            "name": p && p.name || "",
-            "image": p && p.image || "",
-            "sku": p && p.sku || p && p.id || "",
+            "brand": "Huntrix", // si en el futuro lo quieres dinámico, podrías añadir p.brand en JSON
+            "name": safeStr(p && p.name),
+            "image": safeStr(p && p.image),
+            "sku": safeStr((p && (p.sku || p.id)) || ''),
             "offers": {
               "@type":"Offer",
-              "price": p && p.price || "",
+              "price": toCLP(p && p.price),
               "priceCurrency":"CLP",
-              "url": p && p.href_bsale || ""
+              "availability":"https://schema.org/InStock",
+              "itemCondition":"https://schema.org/NewCondition",
+              "url": safeStr(p && p.href_bsale)
             }
           });
         }
       }
     }
   }
+
+  // Build dynamic kits list
   var kitsList = [];
-  if (cfg && cfg.kits && cfg.kits.items){
-    for (var k=0;k<cfg.kits.items.length;k++){
-      var item = cfg.kits.items[k];
+  if (cfg && cfg.kits && Array.isArray(cfg.kits.items)) {
+    for (var ki=0; ki<cfg.kits.items.length; ki++){
+      var k = cfg.kits.items[ki];
       kitsList.push({
         "@type":"Product",
-        "name": item && item.name || "",
-        "image": item && item.image || "",
-        "sku": item && item.sku || item && item.id || "",
+        "brand": "Huntrix",
+        "name": safeStr(k && k.name),
+        "image": safeStr(k && k.image),
+        "sku": safeStr((k && (k.sku || k.id)) || ''),
         "offers": {
           "@type":"Offer",
-          "price": item && item.price || "",
+          "price": toCLP(k && k.price),
           "priceCurrency":"CLP",
-          "url": item && item.href_bsale || ""
+          "availability":"https://schema.org/InStock",
+          "itemCondition":"https://schema.org/NewCondition",
+          "url": safeStr(k && k.href_bsale)
         }
       });
     }
   }
-%>
-<script type="application/ld+json">
-<%- JSON.stringify({
-  "@context":"https://schema.org",
-  "@type":"CollectionPage",
-  "name": title,
-  "description": desc,
-  "url": url,
-  "image": og,
-  "hasPart": [
-    {
-      "@type":"ItemList",
-      "name":"Productos Demon Hunter K-Pop",
-      "itemListElement": products.map(function(p,i){ 
-        return {"@type":"ListItem","position": i+1, "item": p}; 
-      })
-    },
-    {
-      "@type":"ItemList",
-      "name":"Kits Demon Hunter K-Pop",
-      "itemListElement": kitsList.map(function(p,i){ 
-        return {"@type":"ListItem","position": i+1, "item": p}; 
-      })
+
+  // Aggregate rating & reviews desde cfg.social_proof.reviews (si existen)
+  var aggregateRating = null;
+  var reviewsLD = [];
+  if (cfg && cfg.social_proof && Array.isArray(cfg.social_proof.reviews) && cfg.social_proof.reviews.length){
+    var sum = 0;
+    for (var ri=0; ri<cfg.social_proof.reviews.length; ri++){
+      var r = cfg.social_proof.reviews[ri];
+      var rating = Number(r && r.rating) || 0;
+      sum += rating;
+      reviewsLD.push({
+        "@type":"Review",
+        "reviewBody": safeStr(r && r.text),
+        "author": { "@type":"Person", "name": safeStr(r && r.name) },
+        "reviewRating": { "@type":"Rating", "ratingValue": rating, "bestRating": 5, "worstRating": 1 }
+      });
     }
-  ]
-}, null, 2) %>
-</script>
+    aggregateRating = {
+      "@type":"AggregateRating",
+      "ratingValue": (sum / cfg.social_proof.reviews.length).toFixed(1),
+      "reviewCount": cfg.social_proof.reviews.length,
+      "bestRating": 5,
+      "worstRating": 1
+    };
+  }
+
+  // CollectionPage JSON-LD
+  var collectionLD = {
+    "@context":"https://schema.org",
+    "@type":"CollectionPage",
+    "name": safeStr(cfg && cfg.meta && cfg.meta.title),
+    "description": safeStr(cfg && cfg.meta && cfg.meta.description),
+    "url": safeStr(cfg && cfg.meta && cfg.meta.canonical),
+    "image": safeStr(cfg && cfg.meta && cfg.meta.ogImage),
+    "hasPart":[]
+  };
+
+  // ItemList de productos
+  if (productsList.length){
+    collectionLD.hasPart.push({
+      "@type":"ItemList",
+      "name":"Productos",
+      "itemListOrder":"http://schema.org/ItemListOrderAscending",
+      "numberOfItems": productsList.length,
+      "itemListElement": productsList.map(function(p,i){ return {"@type":"ListItem","position": i+1, "item": p}; })
+    });
+  }
+
+  // ItemList de kits
+  if (kitsList.length){
+    collectionLD.hasPart.push({
+      "@type":"ItemList",
+      "name":"Kits",
+      "itemListOrder":"http://schema.org/ItemListOrderAscending",
+      "numberOfItems": kitsList.length,
+      "itemListElement": kitsList.map(function(p,i){ return {"@type":"ListItem","position": i+1, "item": p}; })
+    });
+  }
+
+  // Si hay rating/reviews, anexamos a CollectionPage
+  if (aggregateRating){ collectionLD.aggregateRating = aggregateRating; }
+  if (reviewsLD.length){ collectionLD.review = reviewsLD; }
+
+  // Breadcrumbs dinámicos usando canonical
+  var bcItems = [
+    {"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.dyshopnow.cl/"},
+    {"@type":"ListItem","position":2,"name":"Landing","item":"https://www.dyshopnow.cl/landing/"}
+  ];
+  if (cfg && cfg.meta && cfg.meta.canonical){
+    bcItems.push({"@type":"ListItem","position":3,"name": safeStr(cfg.meta.title || 'Colección'),"item": safeStr(cfg.meta.canonical)});
+  }
+  var breadcrumbsLD = {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement": bcItems
+  };
+
+  // Organization
+  var orgLD = {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Dyshopnow",
+    "url":"https://www.dyshopnow.cl/",
+    "logo":"https://storage.googleapis.com/dyshopnow-landing-assets/logo/favicon.png",
+    "sameAs":[
+      // Pon aquí tus redes reales si quieres:
+      "https://www.instagram.com/dyshopnow"
+      // "https://www.facebook.com/tu_cuenta",
+      // "https://www.tiktok.com/@tu_cuenta"
+    ]
+  };
+%>
+
+<!-- JSON-LD dinámicos -->
+<script type="application/ld+json"><%- JSON.stringify(collectionLD) %></script>
+<script type="application/ld+json"><%- JSON.stringify(breadcrumbsLD) %></script>
+<script type="application/ld+json"><%- JSON.stringify(orgLD) %></script>
