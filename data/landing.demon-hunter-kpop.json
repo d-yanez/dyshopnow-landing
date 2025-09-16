@@ -34,6 +34,8 @@
   "name": "Peluches Demon Hunter y Saja Boys",
   "seo_text": "Peluches de felpa Huntrix & Saja Boys (20–26 cm) inspirados en Demon Hunter K-Pop. Suaves, de calidad y edición limitada. Envío a todo Chile.",
   "href_bsale_category": "https://www.dyshopnow.cl/search?search_text=peluche%2Bdemon%2Bhun&limit=20&order=relevance&way=DESC&utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp",
+  "image_fit": "contain",
+  "image_ratio": "1/1",
   "products": [
     {
       "id": "3121877992",
@@ -71,6 +73,16 @@
       "image": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/peluches/1691185099.webp",
       "href_bsale": "https://www.dyshopnow.cl/product/peluche-demon-jinu-transformado-felpa-demon-hunter-kpop-20cm?utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp"
     },
+     {
+        "id": "3152398042",
+        "sku": "3152398042",
+        "name": "Peluche Jinu Demon Hunters Saja Boys 25cm Felpa Guerras Kpop",
+        "description": "Peluche de Jinu (Saja Boys) de 25 cm inspirado en Demon Hunters K-Pop. Fabricado en felpa suave de alta calidad, ideal para fans y coleccionistas. Un diseño exclusivo que revive las guerreras del K-Pop en tu colección.",
+        "price": 25990,
+        "badge": "Stock limitado",
+        "image": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/peluches/3152398042.webp",
+        "href_bsale": "https://www.dyshopnow.cl/product/peluche-jinu-demon-hunters-saja-boys-25cm-felpa-guerras-kpop?utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp"
+        },
     {
       "id": "1698694803",
       "sku": "1698694803",
@@ -145,6 +157,7 @@
         "image": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/decoracion/1694645357-1.webp",
         "href_bsale": "https://www.dyshopnow.cl/product/mantel-huntrix-demon-hunter-plastico-108x180cm-para-cotillon?utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp"
       }
+     
     ]
   }
 ],
