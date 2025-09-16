@@ -1,0 +1,67 @@
+# convertir to webp
+cwebp -q 82 3152837254.jpg -o 3152837254.webp
+
+json template example:
+{
+  "categoria": "Peluches Demon Hunter y Saja Boys",
+  "intro": "Peluches de felpa suave de huntrix y saja boys de la pelicula demon hunters guerreras kpop",
+  "cta": "https://www.dyshopnow.cl/search?search_text=peluche%2Bdemon%2Bhun&limit=20&order=relevance&way=DESC",
+  "productos": [
+    {
+      "nombre": "Peluche Rumi Demon Hunter Huntrix Kpop Felpa 26cm Calidad",
+      "sku": "3121877992",
+      "precio": 25990,
+      "imagen": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/peluches/3121877992.webp",
+      "url": "https://www.dyshopnow.cl/product/peluche-rumi-demon-hunter-huntrix-kpop-felpa-26cm-calidad"
+    },
+    {
+      "nombre": "Peluche Zoey Demon Hunter Huntrix Kpop Felpa 20cm",
+      "sku": "1690595901",
+      "precio": 25990,
+      "imagen": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/peluches/1690595901.webp",
+      "url": "https://www.dyshopnow.cl/product/peluche-zoey-demon-hunter-huntrix-kpop-felpa-20cm"
+    },
+    {
+      "nombre": "Peluche Demon Mira Huntrix Kpop 23cm Felpa Calidad Diseño",
+      "sku": "1691107141",
+      "precio": 25990,
+      "imagen": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/peluches/1691107141.webp",
+      "url": "https://www.dyshopnow.cl/product/peluche-demon-mira-huntrix-kpop-23cm-felpa-calidad-diseno"
+    },
+    {
+      "nombre": "Peluche Demon Jinu Transformado Felpa Demon Hunter Kpop 20cm",
+      "sku": "1691185099",
+      "precio": 25990,
+      "imagen": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/peluches/1691185099.webp",
+      "url": "https://www.dyshopnow.cl/product/peluche-demon-jinu-transformado-felpa-demon-hunter-kpop-20cm"
+    },
+    {
+      "nombre": "Peluche Abs Demon Hunters Saja Boys 25cm Felpa Guerreras",
+      "sku": "1698694803",
+      "precio": 25990,
+      "imagen": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/peluches/1698694803.webp",
+      "url": "https://www.dyshopnow.cl/product/peluche-abs-demon-hunters-saja-boys-25cm-felpa-guerreras"
+    },
+    {
+      "nombre": "Peluche Mistery Saja Boys Demon Hunters 24cm Felpa Guerras Kpop",
+      "sku": "1698682775",
+      "precio": 25990,
+      "imagen": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/peluches/1698682775.webp",
+      "url": "https://www.dyshopnow.cl/product/peluche-mistery-saja-boys-demon-hunters-24cm-felpa-guerras-kpop"
+    },
+    {
+      "nombre": "Peluche Romance Saja Boys Kpop Demon Hunters 24cm Guerreras",
+      "sku": "1698695807",
+      "precio": 25990,
+      "imagen": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/peluches/1698695807.webp",
+      "url": "https://www.dyshopnow.cl/product/peluche-romance-saja-boys-kpop-demon-hunters-24cm-guerreras"
+    },
+    {
+      "nombre": "Peluche Baby Saja Boys Kpop Demon Hunters 26cm Felpa Gerrera",
+      "sku": "3152837254",
+      "precio": 25990,
+      "imagen": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/peluches/3152837254.webp",
+      "url": "https://www.dyshopnow.cl/product/peluche-baby-saja-boys-kpop-demon-hunters-26cm-felpa-gerrera"
+    }
+  ]
+}

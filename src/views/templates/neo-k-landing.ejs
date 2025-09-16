@@ -2,6 +2,14 @@
 <html lang="es">
 <head>
   <%- include('../partials/head-seo.ejs') %>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+        event: 'landing_init',
+        landing_slug: '<%= (cfg && cfg.meta && cfg.meta.slug) ? cfg.meta.slug : (slug || "") %>',
+        landing_template: '<%= (cfg && cfg.template) ? cfg.template : "" %>'
+    });
+    </script>
 
   <!-- Google Tag Manager -->
     <script>
@@ -20,6 +28,7 @@
       --light:<%= (cfg.theme && cfg.theme.light) ? cfg.theme.light : '#FFFFFF' %>;
     }
   </style>
+
 </head>
 <body class="bg-[#0a0f1a] text-white">
     <!-- Google Tag Manager (noscript) -->
@@ -44,12 +53,12 @@
       <p class="text-gray-300 mt-3"><%= (cfg.hero && cfg.hero.sub) ? cfg.hero.sub : '' %></p>
       <div class="mt-6 flex gap-3">
         <% if (cfg.hero && cfg.hero.cta_primary) { %>
-          <a href="<%= cfg.hero.cta_primary.href %>" class="bg-[var(--primary)] hover:bg-blue-500 px-5 py-3 rounded-xl">
+          <a id="cta-primary" href="<%= cfg.hero.cta_primary.href %>" class="bg-[var(--primary)] hover:bg-blue-500 px-5 py-3 rounded-xl">
             <%= cfg.hero.cta_primary.label %>
           </a>
         <% } %>
         <% if (cfg.hero && cfg.hero.cta_secondary) { %>
-          <a href="<%= cfg.hero.cta_secondary.href %>" class="border border-white/20 hover:border-white/40 px-5 py-3 rounded-xl">
+          <a id="cta-secondary" href="<%= cfg.hero.cta_secondary.href %>" class="border border-white/20 hover:border-white/40 px-5 py-3 rounded-xl">
             <%= cfg.hero.cta_secondary.label %>
           </a>
         <% } %>
@@ -106,6 +115,9 @@
         <p class="text-gray-300 mb-4"><%= cat.seo_text %></p>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <% var __prods = (cat && cat.products) ? cat.products : []; 
+             // Opciones visuales por categoría (con defaults)
+            var fit = (cat.image_fit === 'contain') ? 'object-contain' : 'object-cover';
+            var ratio = (cat.image_ratio === '1/1') ? 'aspect-[1/1]' : 'aspect-[4/3]';
              for (var pi = 0; pi < __prods.length; pi++) { 
                var p = __prods[pi]; %>
             <div class="bg-white/5 rounded-xl p-4">

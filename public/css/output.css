@@ -659,6 +659,10 @@ video {
   display: none;
 }
 
+.aspect-\[1\/1\] {
+  aspect-ratio: 1/1;
+}
+
 .aspect-\[4\/3\] {
   aspect-ratio: 4/3;
 }
