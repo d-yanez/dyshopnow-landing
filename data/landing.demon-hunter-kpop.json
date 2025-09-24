@@ -21,7 +21,10 @@
     },
     "badges": ["★ 4,7 reseñas", "🛡 Compra segura", "🚚 Envío rápido"],
     "cta_primary": { "label": "Ver colección", "href": "#categorias" },
-    "cta_secondary": { "label": "Ofertas de lanzamiento", "href": "#destacados" }
+    "cta_secondary": {
+      "label": "Especial 10% DESCUENTO Primera Compra!",
+      "href": "https://www.dyshopnow.cl/search?search_text=demon%2Bhunter&limit=20&order=relevance&way=DESC&utm_source=landing&utm_medium=cta_secondary&utm_campaign=dhk_lp&utm_content=offers&trigger=klaviyo_launch10"
+    }
   },
   "story": {
     "title": "¿Por qué todos hablan de Demon Hunter K-Pop?",
