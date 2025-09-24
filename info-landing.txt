@@ -97,3 +97,34 @@ setopt nullglob
 for img in *.jpg *.JPG *.png *.PNG; do 
   cwebp -q 82 -resize 800 800 "$img" -o "${img%.*}.webp"
 done
+
+
+#ejemplo de salida de categoria de json:
+{
+  "id": "figuras",
+  "name": "Figuras Demon Hunter K-pop",
+  "seo_text": "Colecciona las figuras PVC Demon Hunter estilo K-pop y Saja Boys de 5 a 11 cm. Detalles premium, sets exclusivos y stock limitado en Dyshopnow con envíos a todo Chile.",
+  "href_bsale_category": "https://www.dyshopnow.cl/search?search_text=demon%2Bfigura&limit=20&order=relevance&way=DESC&utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp",
+  "products": [
+    {
+      "id": "3134785108",
+      "sku": "3134785108",
+      "name": "Set 6 Figuras Pvc Huntrix Demon Hunter Kpop 10cm Kpop Golden",
+      "description": "Set de 6 figuras PVC Huntrix de 10 cm inspiradas en el concepto Golden. Acabado nítido y base estable para exhibición. Resultado: vitrina llamativa con estética K-pop.",
+      "price": 19990,
+      "badge": "Stock limitado",
+      "image": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/figures/3134785108.webp",
+      "href_bsale": "https://www.dyshopnow.cl/product/set-6-figuras-pvc-huntrix-demon-hunter-kpop-10cm-kpop-golden?utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp"
+    },
+    {
+      "id": "3152781036",
+      "sku": "3152781036",
+      "name": "Set 7 Figuras PVC Saja Boys Demon Hunters 7cm Guerreras Kpop",
+      "description": "Set de 7 figuras Saja Boys de 7 cm con poses de guerreras K-pop. PVC resistente y colores vibrantes. Resultado: mini colección compacta y llena de carácter.",
+      "price": 21990,
+      "badge": "Stock limitado",
+      "image": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/figures/3152781036.webp",
+      "href_bsale": "https://www.dyshopnow.cl/product/set-7-figuras-pvc-saja-boys-demon-hunters-7cm-guerreras-kpop?utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp"
+    }
+  ]
+}

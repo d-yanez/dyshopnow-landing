@@ -152,43 +152,6 @@
   <% } %>
   </section>
 
-  <!-- Kits -->
-  <% if (cfg.kits && cfg.kits.enabled && (cfg.kits.items||[]).length) { %>
-  <section id="kits" class="mx-auto max-w-7xl px-4 py-8">
-    <h2 class="text-2xl md:text-3xl font-semibold mb-3"><%= cfg.kits.title %></h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <% var __kits = (cfg.kits && cfg.kits.items) ? cfg.kits.items : []; 
-         for (var ki = 0; ki < __kits.length; ki++) { 
-           var k = __kits[ki]; %>
-        <div class="bg-white/5 rounded-xl p-5 flex gap-5 items-center">
-          
-          <img src="<%= k.image %>"
-            alt="<%= k.name %>"
-            class="w-40 h-40 object-cover rounded-lg"
-            width="160" height="160"
-            loading="lazy" decoding="async">
-          <div>
-            <h3 class="font-semibold"><%= k.name %></h3>
-            <p class="text-blue-200 mt-1">$<%= (k.price).toLocaleString('es-CL') %></p>
-            <a href="<%= k.href_bsale %>" class="mt-3 inline-block bg-[var(--primary)] hover:bg-blue-500 px-4 py-2 rounded-lg"
-                onclick="dataLayer.push({
-                event: 'click_bsale_kit',
-                kit_name: '<%= k.name %>',
-                kit_sku: '<%= k.sku %>',
-                kit_price: '<%= k.price %>'
-            })">Comprar ahora</a>
-          </div>
-        </div>
-  <% } %>
-    </div>
-    <% if (cfg.kits.href_bsale_category) { %>
-      <div class="mt-4">
-        <a href="<%= cfg.kits.href_bsale_category %>" class="text-blue-300 hover:text-blue-200">Ver todos los kits →</a>
-      </div>
-    <% } %>
-  </section>
-  <% } %>
-
   <script defer src="/js/neo-k-landing.js"></script>
 </body>
 </html>

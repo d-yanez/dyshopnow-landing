@@ -30,6 +30,86 @@
   },
   "categories": [
     {
+  "id": "kits",
+  "name": "Kits Demon Hunter K-pop",
+  "seo_text": "Los Kits Demon Hunter K-pop incluyen globos, banners, toppers y decoración completa para cumpleaños. Todo lo necesario en un solo pack, fácil de instalar y con diseños exclusivos Huntrix y Saja Boys.",
+  "href_bsale_category": "https://www.dyshopnow.cl/search?search_text=kit%2Bdemon%2Bhunters&limit=20&order=relevance&way=DESC&utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp",
+  "products": [
+    {
+      "id": "3082403168",
+      "sku": "3082403168",
+      "name": "Kit Fiesta Cumpleaños Huntrix Kpop Demon Hunter 30 Pzs.",
+      "description": "Incluye 16 globos con diseños exclusivos, 1 banner 'Happy Birthday', 1 topper grande para torta y 12 toppers para cupcakes. Resultado: ambientación temática completa en minutos.",
+      "price": 21990,
+      "badge": "Set completo",
+      "image": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/decoracion/kit-3082403168-1.webp",
+      "href_bsale": "https://www.dyshopnow.cl/product/kit-fiesta-cumpleanos-huntrix-kpop-demon-hunter-30-pzs?utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp",
+      "includes": [
+        "16 globos de látex",
+        "1 banner 'Happy Birthday'",
+        "1 topper grande para torta",
+        "12 toppers para cupcakes"
+      ]
+    },
+    {
+      "id": "3134745358",
+      "sku": "3134745358",
+      "name": "Kit Cumpleaños Huntrix Demon Hunter Saja Boys Cotillón",
+      "description": "Incluye 16 globos con diseños de Mira, Rumi, Zoey y Jinu, 1 banner 'Happy Birthday' ilustrado, 1 topper de torta y 12 adornos para cupcakes. Resultado: decoración vibrante y temática lista para sorprender.",
+      "price": 21990,
+      "badge": "Set completo",
+      "image": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/decoracion/3134745358-1.webp",
+      "href_bsale": "https://www.dyshopnow.cl/product/kit-cumpleanos-huntrix-demon-hunter-saja-boys-cotillon?utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp",
+      "includes": [
+        "16 globos de látex",
+        "1 banner 'Happy Birthday'",
+        "1 topper grande para torta",
+        "12 toppers para cupcakes"
+      ]
+    }
+  ]
+}
+,
+    {
+  "id": "munecas",
+  "name": "Muñecas Demon Hunter K-pop",
+  "seo_text": "Descubre las muñecas Demon Hunter estilo K-pop de 30 cm con articulaciones móviles. Modelos exclusivos inspirados en guerreras Huntrix para coleccionistas y fans en Chile.",
+  "href_bsale_category": "https://www.dyshopnow.cl/search?search_text=mu%C3%B1eca%2Bdemon%2Bhunter&limit=20&order=relevance&way=DESC&utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp",
+  "products": [
+    {
+      "id": "3172520522",
+      "sku": "3172520522",
+      "name": "Muñeca Rumi Demon Hunter Guerreras Kpop 30cm Genérica Huntrx",
+      "description": "Muñeca Rumi de 30 cm estilo Demon Hunter K-pop. Fabricada en plástico resistente, con articulaciones móviles y vestuario temático Huntrix. Resultado: figura articulada para juego y colección.",
+      "price": 25990,
+      "badge": "Stock limitado",
+      "image": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/dolls/3172520522.webp",
+      "href_bsale": "https://www.dyshopnow.cl/product/muneca-rumi-demon-hunter-guerreras-kpop-30cm-generica-huntrx?utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp"
+    },
+    {
+      "id": "3172586106",
+      "sku": "3172586106",
+      "name": "Muñeca Mira Guerreras Kpop Demon Hunter 30cm Genérica Huntrix",
+      "description": "Muñeca Mira Demon Hunter de 30 cm con diseño inspirado en guerreras K-pop Huntrix. Plástico articulado y detalles en vestuario para coleccionistas y fanáticos. Resultado: pieza destacada para exhibir.",
+      "price": 25990,
+      "badge": "Stock limitado",
+      "image": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/dolls/3172586106.webp",
+      "href_bsale": "https://www.dyshopnow.cl/product/muneca-mira-guerreras-kpop-demon-hunter-30cm-generica-huntrix?utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp"
+    },
+    {
+      "id": "3172520998",
+      "sku": "3172520998",
+      "name": "Muñeca Zoey Guerreras Kpop Demon Hunter 30cm Genérica Huntrx",
+      "description": "Muñeca Zoey de 30 cm Demon Hunter estilo K-pop Huntrix. Articulada, ligera y con detalles únicos en traje y peinado. Resultado: complemento ideal para la colección Demon Hunter.",
+      "price": 25990,
+      "badge": "Stock limitado",
+      "image": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/dolls/3172520998.webp",
+      "href_bsale": "https://www.dyshopnow.cl/product/muneca-zoey-guerreras-kpop-demon-hunter-30cm-generica-huntrx?utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp"
+    }
+  ]
+}
+,
+    {
   "id": "figuras",
   "name": "Figuras Demon Hunter K-pop",
   "seo_text": "Colecciona las figuras PVC Demon Hunter estilo K-pop y Saja Boys de 5 a 11 cm. Detalles premium, sets exclusivos y stock limitado en Dyshopnow con envíos a todo Chile.",
@@ -220,45 +300,6 @@
     ]
   }
 ],
-"kits": {
-  "enabled": true,
-  "title": "Kits que ahorran",
-  "href_bsale_category": "https://www.dyshopnow.cl/search?search_text=kit%2Bdemon%2Bhunters&limit=20&order=relevance&way=DESC&utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp",
-  "items": [
-    {
-      "id": "3082403168",
-      "sku": "3082403168",
-      "name": "Kit Fiesta Cumpleaños Huntrix Kpop Demon Hunter 30 Pzs.",
-      "description": "Este kit incluye 16 globos con diseños exclusivos, 1 banner 'Happy Birthday', 1 topper grande para la torta y 12 toppers para cupcakes. Todo lo necesario para una ambientación temática épica en minutos.",
-      "price": 21990,
-      "benefit": "Set completo",
-      "image": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/decoracion/kit-3082403168-1.webp",
-      "href_bsale": "https://www.dyshopnow.cl/product/kit-fiesta-cumpleanos-huntrix-kpop-demon-hunter-30-pzs?utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp",
-      "includes": [
-        "16 globos de látex",
-        "1 banner 'Happy Birthday'",
-        "1 topper grande para la torta",
-        "12 toppers para cupcakes"
-      ]
-    },
-    {
-      "id": "3134745358",
-      "sku": "3134745358",
-      "name": "Kit Cumpleaños Huntrix Demon Hunter Saja Boys Cotillón",
-      "description": "El Kit Fiesta Cumpleaños Huntrix Demon Hunter Saja Boys incluye 16 globos con diseños de Mira, Rumi, Zoey y Jinu, 1 banner 'Happy Birthday' ilustrado, 12 adornos para cupcakes y 1 topper de torta del grupo completo. Una decoración temática vibrante, fácil de instalar y lista para sorprender a todos los fans.",
-      "price": 21990,
-      "benefit": "Set completo",
-      "image": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/decoracion/3134745358-1.webp",
-      "href_bsale": "https://www.dyshopnow.cl/product/kit-cumpleanos-huntrix-demon-hunter-saja-boys-cotillon?utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp",
-      "includes": [
-        "16 globos de látex",
-        "1 banner 'Happy Birthday'",
-        "1 topper grande para la torta",
-        "12 toppers para cupcakes"
-      ]
-    }
-  ]
-},
   "social_proof": {
     "reviews": [
       { "name": "María P.", "text": "Llegó altiro, mi hija feliz con la fiesta Demon Hunter.", "rating": 5 }
