@@ -117,13 +117,15 @@
           <% var __prods = (cat && cat.products) ? cat.products : []; 
              // Opciones visuales por categoría (con defaults)
             var fit = (cat.image_fit === 'contain') ? 'object-contain' : 'object-cover';
-            var ratio = (cat.image_ratio === '1/1') ? 'aspect-[1/1]' : 'aspect-[4/3]';
+            //var ratio = (cat.image_ratio === '1/1') ? 'aspect-[1/1]' : 'aspect-[4/3]';
+
+            var ratio = 'aspect-[1/1]';
              for (var pi = 0; pi < __prods.length; pi++) { 
                var p = __prods[pi]; %>
             <div class="bg-white/5 rounded-xl p-4">
               <img src="<%= p.image %>"
                 alt="<%= p.name %>"
-                class="rounded-lg w-full aspect-[4/3] object-cover"
+                class="rounded-lg w-full aspect-[1/1] object-cover"
                 width="600" height="450"
                 loading="lazy" decoding="async">
               <h4 class="mt-3 font-semibold"><%= p.name %></h4>

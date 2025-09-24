@@ -65,3 +65,35 @@ json template example:
     }
   ]
 }
+
+#template 
+{
+  "categoria": "Figuras PVC Demon Hunter (PBC / Hard Boys)",
+  "intro": "Figuras coleccionables de PVC con base estable y detalles premium de Demon Hunter y Hard Boys.",
+  "cta": "https://www.dyshopnow.cl/search?search_text=figura%2Bpvc%2Bdemon%2Bhunter&limit=20&order=relevance&way=DESC",
+  "image_fit": "contain",
+  "image_ratio": "1/1",
+  "productos": [
+    {
+      "nombre": "NOMBRE_PRODUCTO_1",
+      "sku": "SKU_1",
+      "precio": 0,
+      "imagen": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/figuras/SKU_1.webp",
+      "url": "https://www.dyshopnow.cl/product/SLUG_PRODUCTO_1"
+    },
+    {
+      "nombre": "NOMBRE_PRODUCTO_2",
+      "sku": "SKU_2",
+      "precio": 0,
+      "imagen": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/figuras/SKU_2.webp",
+      "url": "https://www.dyshopnow.cl/product/SLUG_PRODUCTO_2"
+    }
+  ]
+}
+
+#comando para dejar todos los. png/jpg en web 800x800
+
+setopt nullglob
+for img in *.jpg *.JPG *.png *.PNG; do 
+  cwebp -q 82 -resize 800 800 "$img" -o "${img%.*}.webp"
+done
