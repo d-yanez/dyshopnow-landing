@@ -35,7 +35,7 @@
     {
   "id": "kits",
   "name": "Kits Demon Hunter K-pop",
-  "seo_text": "Los Kits Demon Hunter K-pop incluyen globos, banners, toppers y decoración completa para cumpleaños. Todo lo necesario en un solo pack, fácil de instalar y con diseños exclusivos Huntrix y Saja Boys.",
+  "seo_text": "Los Kits Demon Hunter K-pop incluyen globos, banners, toppers y decoración completa para cumpleaños. Todo lo necesario en un solo pack, fácil de instalar y con diseños exclusivos Huntrix y Saja Boys. Otros articulos: stickers, suministros (vasos, platos, mantel, etc).",
   "href_bsale_category": "https://www.dyshopnow.cl/search?search_text=kit%2Bdemon%2Bhunters&limit=20&order=relevance&way=DESC&utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp",
   "products": [
     {
@@ -70,7 +70,7 @@
         "12 toppers para cupcakes"
       ]
     },
- {
+   {
       "id": "3172586106",
       "sku": "3082546686",
       "name": "Globos Cumpleaños Kpop Huntrix Demon Hunter X12 Rumi Mira Zoey",
@@ -79,7 +79,37 @@
       "badge": "Stock limitado",
       "image": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/decoracion/3082546686.webp",
       "href_bsale": "https://www.dyshopnow.cl/product/globos-cumpleanos-kpop-huntrix-demon-hunter-x12-rumi-mira-zo?utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp"
-    }
+    },
+    {
+        "id": "1694593569",
+        "sku": "1694593569",
+        "name": "Vasos Huntrix Demon Hunters Pack 10 Fiesta 9cm Para Cotillon",
+        "description": "Pack de 10 vasos Huntrix Demon Hunters inspirados en la canción Golden. Cartón desechable de calidad, 9 cm de alto, 5 cm base y 7 cm boca superior. Ideales para bebidas frías o calientes. Resultado: una mesa vibrante con estilo único.",
+        "price": 5990,
+        "badge": "Stock limitado",
+        "image": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/decoracion/1694593569-1.webp",
+        "href_bsale": "https://www.dyshopnow.cl/product/vasos-huntrix-demon-hunters-pack-10-fiesta-9cm-para-cotillon?utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp"
+      },
+      {
+        "id": "1694476693",
+        "sku": "1694476693",
+        "name": "Pack 10 Platos Huntrix Demon Hunters 18cm Fiestas Cumpleaños",
+        "description": "Pack de 10 platos Huntrix Demon Hunters de 18 cm. Fabricados en cartón resistente, con diseño vibrante y temático. Perfectos para cumpleaños y eventos. Resultado: una mesa auténtica y llena de color para tus invitados.",
+        "price": 5990,
+        "badge": "Stock limitado",
+        "image": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/decoracion/1694476693-1.webp",
+        "href_bsale": "https://www.dyshopnow.cl/product/pack-10-platos-huntrix-demon-hunters-18cm-fiestas-cumpleanos?utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp"
+      },
+      {
+        "id": "1694645357",
+        "sku": "1694645357",
+        "name": "Mantel Huntrix Demon Hunter Plastico 108x180cm Para Cotillon",
+        "description": "Mantel plástico Demon Hunter de 108×180 cm, ligero y resistente. Impresión a color con personajes en vestuario icónico. Resultado: mesa temática llamativa que protege y transforma tu fiesta en un recuerdo inolvidable.",
+        "price": 5990,
+        "badge": "Stock limitado",
+        "image": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/decoracion/1694645357-1.webp",
+        "href_bsale": "https://www.dyshopnow.cl/product/mantel-huntrix-demon-hunter-plastico-108x180cm-para-cotillon?utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp"
+      }
   ]
 }
 ,
@@ -272,46 +302,7 @@
       "href_bsale": "https://www.dyshopnow.cl/product/peluche-baby-saja-boys-kpop-demon-hunters-26cm-felpa-gerrera?utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp"
     }
   ]
-},
-  {
-    "id": "decoracion",
-    "name": "Decoración",
-    "seo_text": "Decora tu fiesta Demon Hunter con vasos, platos y mantel temático Huntrix Kpop. Productos originales que darán vida y estilo único a tus celebraciones.",
-    "href_bsale_category": "https://www.dyshopnow.cl/search?search_text=demon%2Bhunter%2Bcotillon&limit=20&order=relevance&way=DESC&utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp",
-    "products": [
-      {
-        "id": "1694593569",
-        "sku": "1694593569",
-        "name": "Vasos Huntrix Demon Hunters Pack 10 Fiesta 9cm Para Cotillon",
-        "description": "Pack de 10 vasos Huntrix Demon Hunters inspirados en la canción Golden. Cartón desechable de calidad, 9 cm de alto, 5 cm base y 7 cm boca superior. Ideales para bebidas frías o calientes. Resultado: una mesa vibrante con estilo único.",
-        "price": 5990,
-        "badge": "Stock limitado",
-        "image": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/decoracion/1694593569-1.webp",
-        "href_bsale": "https://www.dyshopnow.cl/product/vasos-huntrix-demon-hunters-pack-10-fiesta-9cm-para-cotillon?utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp"
-      },
-      {
-        "id": "1694476693",
-        "sku": "1694476693",
-        "name": "Pack 10 Platos Huntrix Demon Hunters 18cm Fiestas Cumpleaños",
-        "description": "Pack de 10 platos Huntrix Demon Hunters de 18 cm. Fabricados en cartón resistente, con diseño vibrante y temático. Perfectos para cumpleaños y eventos. Resultado: una mesa auténtica y llena de color para tus invitados.",
-        "price": 5990,
-        "badge": "Stock limitado",
-        "image": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/decoracion/1694476693-1.webp",
-        "href_bsale": "https://www.dyshopnow.cl/product/pack-10-platos-huntrix-demon-hunters-18cm-fiestas-cumpleanos?utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp"
-      },
-      {
-        "id": "1694645357",
-        "sku": "1694645357",
-        "name": "Mantel Huntrix Demon Hunter Plastico 108x180cm Para Cotillon",
-        "description": "Mantel plástico Demon Hunter de 108×180 cm, ligero y resistente. Impresión a color con personajes en vestuario icónico. Resultado: mesa temática llamativa que protege y transforma tu fiesta en un recuerdo inolvidable.",
-        "price": 5990,
-        "badge": "Stock limitado",
-        "image": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/decoracion/1694645357-1.webp",
-        "href_bsale": "https://www.dyshopnow.cl/product/mantel-huntrix-demon-hunter-plastico-108x180cm-para-cotillon?utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp"
-      }
-     
-    ]
-  }
+}
 ],
   "social_proof": {
     "reviews": [
