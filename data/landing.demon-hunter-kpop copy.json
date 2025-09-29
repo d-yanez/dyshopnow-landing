@@ -38,7 +38,22 @@
   "seo_text": "Los Kits Demon Hunter K-pop incluyen globos, banners, toppers y decoración completa para cumpleaños. Todo lo necesario en un solo pack, fácil de instalar y con diseños exclusivos Huntrix y Saja Boys. Otros articulos: stickers, suministros (vasos, platos, mantel, etc).",
   "href_bsale_category": "https://www.dyshopnow.cl/search?search_text=kit%2Bdemon%2Bhunters&limit=20&order=relevance&way=DESC&utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp",
   "products": [
-   
+    {
+      "id": "3082403168",
+      "sku": "3082403168",
+      "name": "Kit Fiesta Cumpleaños Huntrix Kpop Demon Hunter 30 Pzs.",
+      "description": "Incluye 16 globos con diseños exclusivos, 1 banner 'Happy Birthday', 1 topper grande para torta y 12 toppers para cupcakes. Resultado: ambientación temática completa en minutos.",
+      "price": 21990,
+      "badge": "Set completo",
+      "image": "https://storage.googleapis.com/dyshopnow-landing-assets/landing/demon-hunter-kpop/categorias/decoracion/kit-3082403168-1.webp",
+      "href_bsale": "https://www.dyshopnow.cl/product/kit-fiesta-cumpleanos-huntrix-kpop-demon-hunter-30-pzs?utm_source=landing&utm_medium=referral&utm_campaign=dhk_lp",
+      "includes": [
+        "16 globos de látex",
+        "1 banner 'Happy Birthday'",
+        "1 topper grande para torta",
+        "12 toppers para cupcakes"
+      ]
+    },
     {
       "id": "3134745358",
       "sku": "3134745358",
