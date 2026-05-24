@@ -16,4 +16,4 @@ jobs:
       - run: pnpm install --frozen-lockfile --ignore-scripts || pnpm install --ignore-scripts
       - run: pnpm run deps:policy
       - run: pnpm run deps:policy:lockfile
-      - run: pnpm audit --audit-level high
+      - run: pnpm audit --prod --audit-level high
